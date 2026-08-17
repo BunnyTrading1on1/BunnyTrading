@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -39,11 +40,13 @@ export default function Home() {
             </div>
             <svg className="chart" viewBox="0 0 300 140" preserveAspectRatio="none">
               <polyline
+                className="chart-line"
                 fill="none"
                 stroke="#C08A2E"
                 strokeWidth="2"
-                points="0,90 20,85 40,95 60,70 80,78 100,55 120,62 140,40 160,50 180,30 200,45 220,25 240,35 260,18 280,28 300,15"
+                points="0,80 20,72 40,84 60,66 80,58 100,70 120,88 140,96 160,86 180,74 200,80 220,62 240,54 260,64 280,50 296,56"
               />
+              <circle className="chart-dot" cx="296" cy="56" r="3.5" fill="#D9A94A" />
             </svg>
             <div className="rule-strip">
               <span>
@@ -57,82 +60,149 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="levels" className="line-top">
+      <section id="how-it-works" className="line-top">
         <div className="wrap">
-          <div className="section-head">
-            <span className="eyebrow">Pick your level</span>
-            <h2>What changes is my time.</h2>
-            <p>
-              Three levels of mentorship, from written trade reviews to
-              unlimited live calls.{" "}
-              <Link href="/pricing" style={{ color: "var(--gold)" }}>
-                See full pricing →
-              </Link>
-            </p>
-          </div>
-
-          <div className="feedback-card">
-            <span className="tag">Sample review — Foundations tier</span>
-            <p>
-              &ldquo;Your entry was fine, but you sized 0.03 lots against a $5
-              stop on a $500 account — that&rsquo;s 3% risk on a rule that
-              says 1%. Re-run the position sizing formula and resend before
-              your next trade.&rdquo;
-            </p>
-          </div>
+          <Reveal>
+            <div className="section-head">
+              <span className="eyebrow">How it works</span>
+              <h2>What week one looks like.</h2>
+              <p>
+                No onboarding maze. You start submitting, and the feedback
+                loop begins immediately.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal stagger>
+            <div className="steps">
+              <div className="step">
+                <span className="num">Step 01</span>
+                <h3>Write it down first</h3>
+                <p>
+                  Before you enter, send the reason: the level, the
+                  structure, the stop. If you can&rsquo;t explain it in a
+                  sentence, that&rsquo;s the first thing we fix.
+                </p>
+              </div>
+              <div className="step">
+                <span className="num">Step 02</span>
+                <h3>Size it to the stop</h3>
+                <p>
+                  Run the numbers before the trade, not after. The sizing
+                  tool on this site is the same formula every review checks
+                  against.
+                </p>
+              </div>
+              <div className="step">
+                <span className="num">Step 03</span>
+                <h3>Get it reviewed</h3>
+                <p>
+                  Written feedback within 24 hours on Foundations &mdash;
+                  real-time on Active Trader and Elite. Checked against your
+                  rules before anything else.
+                </p>
+              </div>
+              <div className="step">
+                <span className="num">Step 04</span>
+                <h3>Fix the rule, not the trade</h3>
+                <p>
+                  A winning trade that broke a rule still gets corrected.
+                  Weekly homework locks in what changed, then the loop
+                  repeats.
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      <section id="portal" className="line-top">
+      <section id="levels" className="line-top">
         <div className="wrap">
-          <div className="section-head">
-            <span className="eyebrow">How mentorship works</span>
-            <h2>One place for every submission.</h2>
-            <p>
-              Instead of chasing journal entries across WhatsApp threads,
-              students submit here — reviewed one on one, every trade.
-            </p>
-          </div>
-          <div className="portal">
-            <div className="portal-head">
-              <span>
-                <span className="dot"></span>Amy — Active Trader — Week 1, Day 3
-              </span>
-              <span className="status-pill">Reviewed</span>
+          <Reveal>
+            <div className="section-head">
+              <span className="eyebrow">Pick your level</span>
+              <h2>What changes is my time.</h2>
+              <p>
+                Three levels of mentorship, from written trade reviews to
+                unlimited live calls.{" "}
+                <Link href="/pricing" style={{ color: "var(--gold)" }}>
+                  See full pricing →
+                </Link>
+              </p>
             </div>
-            <div className="portal-body">
-              <div className="journal-row">
-                <div className="q">Did I trade?</div>
-                <div className="a">Yes — one long on XAU/USD, London open.</div>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <div className="feedback-card">
+              <span className="tag">Sample review — Foundations tier</span>
+              <p>
+                &ldquo;Your entry was fine, but you sized 0.03 lots against a
+                $5 stop on a $500 account — that&rsquo;s 3% risk on a rule
+                that says 1%. Re-run the position sizing formula and resend
+                before your next trade.&rdquo;
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="journal" className="line-top">
+        <div className="wrap">
+          <Reveal>
+            <div className="section-head">
+              <span className="eyebrow">Example journal entry</span>
+              <h2>What a reviewed trade looks like.</h2>
+              <p>
+                Every trade gets journalled against the same questions, then
+                reviewed one on one. Here&rsquo;s an example of a completed
+                entry with mentor feedback attached.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="portal">
+              <div className="portal-head">
+                <span>
+                  <span className="dot"></span>Active Trader — Week 1, Day 3
+                </span>
+                <span className="status-pill">Reviewed</span>
               </div>
-              <div className="journal-row">
-                <div className="q">Reason sent first?</div>
-                <div className="a">
-                  Yes, 6 min before entry: &ldquo;4H structure holding above
-                  2,398 support, London liquidity sweep confirmed.&rdquo;
+              <div className="portal-body">
+                <div className="journal-row">
+                  <div className="q">Did I trade?</div>
+                  <div className="a">Yes — one long on XAU/USD, London open.</div>
                 </div>
-              </div>
-              <div className="journal-row">
-                <div className="q">Rules followed?</div>
-                <div className="a">
-                  All held. Hardest: not moving stop after the first pullback.
+                <div className="journal-row">
+                  <div className="q">Reason sent first?</div>
+                  <div className="a">
+                    Yes, 6 min before entry: &ldquo;4H structure holding above
+                    2,398 support, London liquidity sweep confirmed.&rdquo;
+                  </div>
                 </div>
-              </div>
-              <div className="journal-row">
-                <div className="q">Felt</div>
-                <div className="a">Tempted to add size mid-trade. Didn&rsquo;t.</div>
-              </div>
-              <div className="journal-row">
-                <div className="q">Mentor note</div>
-                <div className="a">
-                  <i>
-                    &ldquo;Good restraint on the add. That&rsquo;s the whole
-                    lesson this week — write it down for Friday.&rdquo;
-                  </i>
+                <div className="journal-row">
+                  <div className="q">Rules followed?</div>
+                  <div className="a">
+                    All held. Hardest: not moving stop after the first
+                    pullback.
+                  </div>
+                </div>
+                <div className="journal-row">
+                  <div className="q">Felt</div>
+                  <div className="a">
+                    Tempted to add size mid-trade. Didn&rsquo;t.
+                  </div>
+                </div>
+                <div className="journal-row">
+                  <div className="q">Mentor note</div>
+                  <div className="a">
+                    <i>
+                      &ldquo;Good restraint on the add. That&rsquo;s the whole
+                      lesson this week — write it down for Friday.&rdquo;
+                    </i>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

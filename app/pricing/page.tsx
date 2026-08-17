@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Pricing — Bunny Trading",
@@ -11,14 +12,16 @@ export default function Pricing() {
   return (
     <section className="line-top">
       <div className="wrap">
-        <div className="section-head">
-          <span className="eyebrow">Pick your level</span>
-          <h2>What changes is my time.</h2>
-          <p>
-            Every level teaches you to read the market yourself. Month to
-            month, no lock-in.
-          </p>
-        </div>
+        <Reveal>
+          <div className="section-head">
+            <span className="eyebrow">Pick your level</span>
+            <h2>What changes is my time.</h2>
+            <p>
+              Every level teaches you to read the market yourself. Month to
+              month, no lock-in.
+            </p>
+          </div>
+        </Reveal>
         <div className="tiers">
           <div className="tier">
             <span className="lvl">Level 01</span>
@@ -110,10 +113,12 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="section-head" style={{ marginTop: 88 }}>
-          <span className="eyebrow">Questions</span>
-          <h2>Before you DM.</h2>
-        </div>
+        <Reveal>
+          <div className="section-head" style={{ marginTop: 88 }}>
+            <span className="eyebrow">Questions</span>
+            <h2>Before you DM.</h2>
+          </div>
+        </Reveal>
         <div className="faq">
           <details>
             <summary>Is this only for gold (XAU/USD)?</summary>
