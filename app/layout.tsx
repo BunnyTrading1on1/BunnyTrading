@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Bitter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -24,6 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bunny-trading.vercel.app"),
   title: "Bunny Trading — One-on-One XAU/USD Mentorship",
   description:
     "Structured one-on-one mentorship for gold traders — position sizing, discipline, and real feedback on every trade, before you click buy.",
@@ -39,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Nav />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

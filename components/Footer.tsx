@@ -12,6 +12,9 @@ export default function Footer() {
           DM to Start
         </Link>
       </div>
+      <div className="wrap footer-legal">
+        <Link href="/risk-disclaimer">Risk Disclaimer</Link>
+      </div>
     </footer>
   );
 }

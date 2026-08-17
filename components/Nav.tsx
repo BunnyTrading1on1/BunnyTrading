@@ -8,6 +8,7 @@ export default function Nav() {
           BUNNY <span>TRADING</span>
         </Link>
         <div className="links">
+          <Link href="/about">About</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/position-sizing">Sizing Tool</Link>
         </div>

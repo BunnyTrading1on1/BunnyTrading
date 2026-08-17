@@ -73,7 +73,14 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div style={{ marginTop: 32 }}>
+        <div
+          style={{
+            marginTop: 32,
+            display: "grid",
+            gap: 20,
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          }}
+        >
           <div className="feedback-card">
             <span className="tag">Sample review — Foundations tier</span>
             <p>
@@ -83,6 +90,70 @@ export default function Pricing() {
               your next trade.&rdquo;
             </p>
           </div>
+          <div className="feedback-card">
+            <span className="tag">Sample feedback — Active Trader tier</span>
+            <p>
+              &ldquo;Caught this one live on WhatsApp: you moved your stop
+              after the pullback instead of before. The setup was still
+              valid — the rule violation is what we&rsquo;re fixing, not the
+              trade.&rdquo;
+            </p>
+          </div>
+          <div className="feedback-card">
+            <span className="tag">Sample note — Elite tier</span>
+            <p>
+              &ldquo;Sat in on your London session today. You hesitated 4
+              minutes past your own entry trigger waiting for
+              &lsquo;more confirmation.&rsquo; That hesitation cost you 15
+              pips — let&rsquo;s talk about why on our next call.&rdquo;
+            </p>
+          </div>
+        </div>
+
+        <div className="section-head" style={{ marginTop: 88 }}>
+          <span className="eyebrow">Questions</span>
+          <h2>Before you DM.</h2>
+        </div>
+        <div className="faq">
+          <details>
+            <summary>Is this only for gold (XAU/USD)?</summary>
+            <p>
+              Yes. Every rule, the position sizing tool, and every trade
+              review are built specifically around XAU/USD — not a
+              generalized multi-symbol curriculum.
+            </p>
+          </details>
+          <details>
+            <summary>What actually happens after I DM you?</summary>
+            <p>
+              You&rsquo;ll get a reply within 24 hours to work out which
+              level fits, then you&rsquo;re started &mdash; no onboarding
+              call required unless you want one.
+            </p>
+          </details>
+          <details>
+            <summary>Do I need a funded or prop firm account first?</summary>
+            <p>
+              No. Prop firm prep is part of the Active Trader and Elite
+              tiers if and when you want to go that route — it&rsquo;s not a
+              prerequisite to start.
+            </p>
+          </details>
+          <details>
+            <summary>Can I cancel anytime?</summary>
+            <p>
+              Yes — every level is month to month with no lock-in contract.
+            </p>
+          </details>
+          <details>
+            <summary>What&rsquo;s the actual difference between levels?</summary>
+            <p>
+              Access to my time, not quality of feedback. Foundations gets
+              written reviews within 24 hours; Active Trader adds a weekly
+              call and real-time WhatsApp feedback; Elite adds unlimited
+              calls and live session access.
+            </p>
+          </details>
         </div>
       </div>
     </section>

@@ -64,10 +64,11 @@ export async function POST(req: NextRequest) {
   }
 
   const resend = new Resend(apiKey);
+  const from = process.env.CONTACT_FROM || "Bunny Trading <onboarding@resend.dev>";
 
   try {
     const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM || "Bunny Trading <onboarding@resend.dev>",
+      from,
       to,
       replyTo: email.trim(),
       subject: `New DM from ${name.trim()}${level ? ` — ${level}` : ""}`,
@@ -87,6 +88,20 @@ export async function POST(req: NextRequest) {
       { error: "Couldn't send your message. Try again in a bit." },
       { status: 502 },
     );
+  }
+
+  // Best-effort confirmation to the sender — never fails the request.
+  // Requires a verified sending domain in Resend; silently no-ops on
+  // accounts still in sandbox mode.
+  try {
+    await resend.emails.send({
+      from,
+      to: email.trim(),
+      subject: "Got your message — Bunny Trading",
+      text: `Hey ${name.trim()},\n\nThanks for reaching out — I got your message and will reply within 24 hours.\n\n— Bunny Trading`,
+    });
+  } catch (err) {
+    console.error("Confirmation email failed (non-fatal)", err);
   }
 
   return NextResponse.json({ ok: true });
