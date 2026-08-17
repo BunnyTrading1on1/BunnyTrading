@@ -1,0 +1,26 @@
+import type { Metadata } from "next";
+import PositionSizingCalculator from "@/components/PositionSizingCalculator";
+
+export const metadata: Metadata = {
+  title: "XAUUSD Position Sizing Tool — Bunny Trading",
+  description:
+    "Work out your recommended XAUUSD lot size from account size, risk per trade, and stop distance.",
+};
+
+export default function PositionSizing() {
+  return (
+    <section className="line-top">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="eyebrow">Try it live · XAUUSD only</span>
+          <h2>XAUUSD position sizing, worked out for you.</h2>
+          <p>
+            The formula behind every trade review — turned into a tool you
+            can use before every trade. Change the numbers below.
+          </p>
+        </div>
+        <PositionSizingCalculator />
+      </div>
+    </section>
+  );
+}
