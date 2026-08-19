@@ -42,6 +42,3 @@ next-env.d.ts
 
 .vercel
 .env*
-
-# raw AI-generated image dump — curated picks live in /public/images
-/images

@@ -41,6 +41,10 @@ export default function Home() {
                 <div className="lbl">Min Reward:Risk</div>
               </div>
             </div>
+            <p className="hero-fineprint">
+              Bunny Trading&rsquo;s own risk framework, not personalized
+              advice for your account &mdash; your numbers may differ.
+            </p>
           </div>
           <div className="ticker-card">
             <div className="pair">

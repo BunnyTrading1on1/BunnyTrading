@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Magnetic from "@/components/Magnetic";
 
 const LINKS = [
   { href: "/about", label: "About" },
@@ -38,9 +39,11 @@ export default function Nav() {
           ))}
         </div>
 
-        <Link href="/contact" className="nav-cta">
-          DM to Start
-        </Link>
+        <Magnetic strength={0.25}>
+          <Link href="/contact" className="nav-cta">
+            DM to Start
+          </Link>
+        </Magnetic>
 
         <button
           type="button"

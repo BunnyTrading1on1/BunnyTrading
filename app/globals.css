@@ -8,6 +8,7 @@
   --muted: #8a8172;
   --line: #d8d0be;
   --white: #fbf9f4;
+  --danger: #b4482f;
 
   --font-serif: var(--font-bitter), Georgia, serif;
   --font-display: var(--font-anton), sans-serif;
@@ -161,6 +162,12 @@ header.hero {
   letter-spacing: 0.08em;
   color: var(--muted);
   font-family: var(--font-mono);
+}
+.hero-fineprint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 18px;
+  max-width: 40ch;
 }
 
 /* SIGNATURE: animated ticker line */
@@ -469,6 +476,59 @@ section.line-top {
   color: #b8af9c;
   font-family: var(--font-mono);
   line-height: 1.8;
+}
+.calc-fineprint {
+  font-size: 12px;
+  color: #7d7566;
+  margin-top: 18px;
+  line-height: 1.6;
+  border-top: 1px solid #3a362b;
+  padding-top: 14px;
+}
+.risk-bar {
+  position: relative;
+  height: 6px;
+  background: #3a362b;
+  border-radius: 3px;
+  overflow: visible;
+  margin-bottom: 10px;
+}
+.risk-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--gold);
+  transition:
+    width 0.3s ease-out,
+    background-color 0.3s ease-out;
+}
+.risk-bar-fill.is-over {
+  background: var(--danger);
+}
+.risk-bar-mark {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 12px;
+  background: var(--cream);
+  opacity: 0.5;
+}
+.risk-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+  transition: color 0.3s ease-out;
+}
+.risk-note.is-over {
+  color: var(--danger);
+}
+
+/* Magnetic CTA wrapper — button eases toward the cursor */
+.magnetic {
+  display: inline-block;
+  transition: transform 0.15s ease-out;
 }
 
 /* JOURNAL PORTAL MOCK */
@@ -1066,6 +1126,9 @@ footer .note {
 }
 .hero-stats .lbl {
   color: rgba(243, 238, 228, 0.6);
+}
+.hero-fineprint {
+  color: rgba(243, 238, 228, 0.55);
 }
 .hero .ticker-card {
   border: 1px solid rgba(217, 169, 74, 0.28);

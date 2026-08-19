@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Magnetic from "@/components/Magnetic";
 
 export default function Footer() {
   return (
@@ -8,9 +9,11 @@ export default function Footer() {
           <h3>Ready to start?</h3>
           <div className="note">Month to month · No lock-in</div>
         </div>
-        <Link href="/contact" className="cta">
-          DM to Start
-        </Link>
+        <Magnetic strength={0.3}>
+          <Link href="/contact" className="cta">
+            DM to Start
+          </Link>
+        </Magnetic>
       </div>
       <div className="wrap footer-legal">
         <Link href="/risk-disclaimer">Risk Disclaimer</Link>
