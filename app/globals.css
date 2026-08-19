@@ -1316,7 +1316,7 @@ footer .note {
 .hero-stats .lbl {
   color: rgba(243, 238, 228, 0.6);
 }
-.hero-fineprint {
+.hero .hero-fineprint {
   color: rgba(243, 238, 228, 0.55);
 }
 .hero .ticker-card {

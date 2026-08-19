@@ -27,7 +27,7 @@ export default function Pricing() {
             <span className="lvl">Level 01</span>
             <h3>Foundations</h3>
             <div className="price">
-              $200<small> / mo</small>
+              $199<small> / mo</small>
             </div>
             <ul>
               <li>Weekly homework, real assignments</li>
@@ -43,7 +43,7 @@ export default function Pricing() {
             <span className="lvl">Level 02 · Most Take This</span>
             <h3>Active Trader</h3>
             <div className="price">
-              $400<small> / mo</small>
+              $399<small> / mo</small>
             </div>
             <ul>
               <li>Weekly 60-min 1-on-1 call</li>
@@ -59,7 +59,7 @@ export default function Pricing() {
             <span className="lvl">Level 03</span>
             <h3>Elite</h3>
             <div className="price">
-              $1,000<small> / mo</small>
+              $999<small> / mo</small>
             </div>
             <ul>
               <li>Unlimited calls</li>
@@ -72,6 +72,23 @@ export default function Pricing() {
             </span>
           </Link>
         </div>
+
+        <Reveal>
+          <div className="section-head" style={{ marginTop: 56 }}>
+            <span className="eyebrow">Foundations → Active Trader → Elite</span>
+            <h2>The progression.</h2>
+            <p>
+              Not everyone moves through all three. Some traders stay in
+              Foundations for good, because that&rsquo;s their actual
+              need. Some stay in Active Trader and scale successfully for
+              years. Elite is for people who want maximum access and are
+              willing to pay for it. Each tier teaches you to read the
+              market yourself &mdash; the only thing that changes is how
+              much of my time and attention you get while you&rsquo;re
+              learning it.
+            </p>
+          </div>
+        </Reveal>
 
         <div
           style={{

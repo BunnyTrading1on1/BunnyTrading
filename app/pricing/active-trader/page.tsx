@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Active Trader — Bunny Trading",
   description:
-    "Active Trader: weekly 1-on-1 calls, real-time WhatsApp feedback, and live trade corrections — $400/mo.",
+    "Active Trader: weekly 1-on-1 calls, real-time WhatsApp feedback, and live trade corrections — $399/mo.",
 };
 
 export default function ActiveTraderPage() {
@@ -22,7 +22,7 @@ export default function ActiveTraderPage() {
             <span className="eyebrow">Level 02 · Most take this</span>
             <h2>Active Trader</h2>
             <div className="price" style={{ margin: "12px 0 20px" }}>
-              $400<small> / mo</small>
+              $399<small> / mo</small>
             </div>
             <p>
               Active Trader is Foundations with a mentor who&rsquo;s

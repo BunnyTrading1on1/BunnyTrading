@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Foundations — Bunny Trading",
   description:
-    "Foundations: weekly homework, written trade reviews, and risk management education built around your own account — $200/mo.",
+    "Foundations: weekly homework, written trade reviews, and risk management education built around your own account — $199/mo.",
 };
 
 export default function FoundationsPage() {
@@ -22,7 +22,7 @@ export default function FoundationsPage() {
             <span className="eyebrow">Level 01</span>
             <h2>Foundations</h2>
             <div className="price" style={{ margin: "12px 0 20px" }}>
-              $200<small> / mo</small>
+              $199<small> / mo</small>
             </div>
             <p>
               The Foundation Tier is where discipline meets structure. You

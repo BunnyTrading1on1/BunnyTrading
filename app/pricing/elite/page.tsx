@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Elite — Bunny Trading",
   description:
-    "Elite: unlimited calls, live session access, and priority replies — the fastest feedback loop available, $1,000/mo.",
+    "Elite: unlimited calls, live session access, and priority replies — the fastest feedback loop available, $999/mo.",
 };
 
 export default function ElitePage() {
@@ -22,13 +22,18 @@ export default function ElitePage() {
             <span className="eyebrow">Level 03</span>
             <h2>Elite</h2>
             <div className="price" style={{ margin: "12px 0 20px" }}>
-              $1,000<small> / mo</small>
+              $999<small> / mo</small>
             </div>
             <p>
               Elite is partnership. You get everything in Active Trader,
               and then unlimited access &mdash; no call cap, no
               &ldquo;I&rsquo;ll get back to you tomorrow,&rdquo; no limits
               on what you can ask for.
+            </p>
+            <p className="hero-fineprint" style={{ marginTop: 16 }}>
+              This tier closes once it&rsquo;s full &mdash; not artificial
+              scarcity, unlimited access only works when there&rsquo;s
+              actual capacity.
             </p>
           </div>
         </Reveal>
@@ -54,6 +59,10 @@ export default function ElitePage() {
             <li>
               <b>Deep psychology work</b> &mdash; addressing the beliefs
               and patterns that hold traders back.
+            </li>
+            <li>
+              <b>Faith and emotional support</b>, if you want it &mdash;
+              this tier includes the hard conversations too.
             </li>
             <li>
               <b>Anything on request</b> &mdash; within reason, no
