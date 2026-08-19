@@ -107,15 +107,28 @@ nav .links a:hover,
 nav .links a.active {
   opacity: 1;
 }
+.cta-arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+.nav-cta:hover .cta-arrow,
+.cta:hover .cta-arrow,
+.contact-submit:hover .cta-arrow,
+.tier:hover .cta-arrow,
+.cta-dark:hover .cta-arrow {
+  transform: translateX(4px);
+}
 .nav-cta {
   background: var(--ink);
   color: var(--cream);
   font-family: var(--font-mono);
   font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 10px 18px;
-  border: none;
+  border: 1px solid var(--ink);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -277,6 +290,20 @@ section.line-top {
   line-height: 1.7;
   margin-top: 14px;
 }
+.faq ul {
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 14px 0 0;
+  padding-left: 20px;
+}
+.faq ul li {
+  margin-bottom: 6px;
+}
+.faq p + p,
+.faq p + ul {
+  margin-top: 10px;
+}
 
 .prose {
   max-width: 680px;
@@ -315,6 +342,8 @@ section.line-top {
   padding: 32px 26px;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit;
 }
 .tier.featured {
   background: var(--ink);
@@ -439,6 +468,16 @@ section.line-top {
   font-family: var(--font-mono);
   font-size: 16px;
   border-radius: 2px;
+}
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%23C08A2E' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 11px 8px;
+  padding-right: 38px;
+  cursor: pointer;
 }
 .field textarea {
   font-family: var(--font-serif);
@@ -630,12 +669,109 @@ section.line-top {
 }
 
 /* CONTACT FORM */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: start;
+}
+.contact-aside .section-head {
+  margin-bottom: 0;
+}
+.contact-points {
+  list-style: none;
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rules-list {
+  list-style: none;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+}
+.rules-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-size: 16px;
+  color: var(--ink);
+  border-left: 2px solid var(--gold);
+  padding-left: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .rules-list {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-points li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-size: 15px;
+  color: var(--ink-2);
+  border-left: 2px solid var(--gold);
+  padding-left: 14px;
+}
+.detail-list {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.detail-list li {
+  border-left: 2px solid var(--gold);
+  padding-left: 14px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.detail-list b {
+  color: var(--ink);
+}
+.pt-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+.contact-alt {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.contact-alt span {
+  display: block;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+.contact-alt a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 700;
+}
+.contact-alt a:hover {
+  color: var(--gold-light);
+}
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .contact-panel {
   background: var(--ink);
   color: var(--cream);
   padding: 40px;
   border-radius: 2px;
-  max-width: 560px;
   display: flex;
   flex-direction: column;
 }
@@ -1249,17 +1385,18 @@ footer .cta {
     color 0.22s ease,
     border-color 0.22s ease;
 }
-.tier-btn:hover {
+.tier:hover .tier-btn {
   background: var(--ink);
   color: var(--cream);
 }
-.tier.featured .tier-btn:hover {
+.tier.featured:hover .tier-btn {
   background: var(--gold-light);
   color: var(--ink);
   border-color: var(--gold-light);
 }
 .nav-cta:hover {
   background: var(--gold);
+  border-color: var(--gold);
   color: var(--ink);
 }
 footer .cta:hover {
@@ -1283,7 +1420,8 @@ footer .cta:hover {
     transform: none;
   }
 }
-.faq details[open] p {
+.faq details[open] p,
+.faq details[open] ul {
   animation: faq-open 0.32s ease-out;
 }
 .faq summary {

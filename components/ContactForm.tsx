@@ -13,7 +13,7 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
   const [level, setLevel] = useState(
-    prefillLevel && LEVELS.includes(prefillLevel) ? prefillLevel : "",
+    prefillLevel && LEVELS.includes(prefillLevel) ? prefillLevel : "Active Trader",
   );
   const [message, setMessage] = useState("");
   const [company, setCompany] = useState(""); // honeypot
@@ -50,7 +50,7 @@ export default function ContactForm() {
       setName("");
       setEmail("");
       setLocation("");
-      setLevel("");
+      setLevel("Active Trader");
       setMessage("");
     } catch (err) {
       setStatus("error");
@@ -151,7 +151,13 @@ export default function ContactForm() {
         className="contact-submit"
         disabled={status === "submitting"}
       >
-        {status === "submitting" ? "Sending…" : "Send Message"}
+        {status === "submitting" ? (
+          "Sending…"
+        ) : (
+          <>
+            Send Message<span className="cta-arrow">→</span>
+          </>
+        )}
       </button>
     </form>
   );

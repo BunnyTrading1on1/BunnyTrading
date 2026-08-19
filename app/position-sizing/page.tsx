@@ -12,11 +12,14 @@ export default function PositionSizing() {
     <section className="line-top">
       <div className="wrap">
         <div className="section-head">
-          <span className="eyebrow">Try it live · XAUUSD only</span>
+          <span className="eyebrow">Try it live · Built for XAUUSD</span>
           <h2>XAUUSD position sizing, worked out for you.</h2>
           <p>
-            The formula behind every trade review — turned into a tool you
-            can use before every trade. Change the numbers below.
+            The formula behind every gold trade review — turned into a
+            tool you can use before every trade. Change the numbers below.
+            Trading indexes, crypto, or stocks instead? The sizing math is
+            different for each &mdash; bring your setup to a review and
+            we&rsquo;ll work it out together.
           </p>
         </div>
         <PositionSizingCalculator />

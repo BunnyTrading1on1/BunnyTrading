@@ -12,7 +12,7 @@ export default function Home() {
         <HeroParticles />
         <div className="wrap hero-grid">
           <div>
-            <span className="eyebrow">One-on-one · XAU/USD</span>
+            <span className="eyebrow">One-on-one · Gold, Indexes, Crypto &amp; Stocks</span>
             <h1 className="hero-title">
               <span className="word">Trade</span>{" "}
               <span className="word">the</span>{" "}
@@ -23,9 +23,9 @@ export default function Home() {
               <span className="word">number.</span>
             </h1>
             <p className="lede">
-              Structured mentorship for gold traders — position sizing,
-              discipline, and real feedback on every trade, before you click
-              buy.
+              Structured mentorship for gold, indexes, crypto, and stock
+              traders — position sizing, discipline, and real feedback on
+              every trade, before you click buy.
             </p>
             <div className="hero-stats">
               <div>
@@ -80,8 +80,9 @@ export default function Home() {
               <span className="eyebrow">How it works</span>
               <h2>What week one looks like.</h2>
               <p>
-                No onboarding maze. You start submitting, and the feedback
-                loop begins immediately.
+                Everyone&rsquo;s week one will look different &mdash; this
+                is just an example. Your weeks get set out for you as your
+                journey goes on and as you grow.
               </p>
             </div>
           </Reveal>
@@ -148,12 +149,15 @@ export default function Home() {
 
           <Reveal delay={80}>
             <div className="feedback-card">
-              <span className="tag">Sample review — Foundations tier</span>
+              <span className="tag">Sample feedback — Foundations tier</span>
               <p>
-                &ldquo;Your entry was fine, but you sized 0.09 lots against a
-                $5 stop on a $500 account — that&rsquo;s 9% risk on a rule
-                that says 3%. Re-run the position sizing formula and resend
-                before your next trade.&rdquo;
+                &ldquo;You&rsquo;ve been right on direction three weeks
+                straight, but you&rsquo;re still not making money &mdash;
+                because you cut winners early and let losers run past your
+                own stop. That&rsquo;s not a strategy problem, it&rsquo;s a
+                discipline problem. This week: no closing a trade before it
+                hits your stop or target, no exceptions. We&rsquo;ll talk
+                about why in Friday&rsquo;s review.&rdquo;
               </p>
             </div>
           </Reveal>
@@ -211,15 +215,21 @@ export default function Home() {
                 <div className="journal-row">
                   <div className="q">Felt</div>
                   <div className="a">
-                    Tempted to add size mid-trade. Didn&rsquo;t.
+                    Wanted to add size once it moved in my favor &mdash;
+                    partly to prove I could&rsquo;ve gone bigger. Sent 0.02
+                    lots like the plan said, and nothing more.
                   </div>
                 </div>
                 <div className="journal-row">
                   <div className="q">Mentor note</div>
                   <div className="a">
                     <i>
-                      &ldquo;Good restraint on the add. That&rsquo;s the whole
-                      lesson this week — write it down for Friday.&rdquo;
+                      &ldquo;That urge to add size once you&rsquo;re already
+                      right is the same instinct that blows accounts up
+                      eventually &mdash; you just haven&rsquo;t paid for it
+                      yet. Catching it and sticking to the number is worth
+                      more than the extra pips would&rsquo;ve been. Write
+                      that down for Friday.&rdquo;
                     </i>
                   </div>
                 </div>

@@ -11,7 +11,7 @@ export default function Footer() {
         </div>
         <Magnetic strength={0.3}>
           <Link href="/contact" className="cta">
-            DM to Start
+            DM to Start<span className="cta-arrow">→</span>
           </Link>
         </Magnetic>
       </div>

@@ -12,7 +12,7 @@ export default function NotFound() {
         </p>
         <div className="notfound-links">
           <Link href="/" className="cta-dark">
-            Back to Home
+            Back to Home<span className="cta-arrow">→</span>
           </Link>
           <Link href="/pricing">See Pricing</Link>
           <Link href="/position-sizing">Sizing Tool</Link>

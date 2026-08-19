@@ -27,9 +27,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bunny-trading.vercel.app"),
-  title: "Bunny Trading — One-on-One XAU/USD Mentorship",
+  title: "Bunny Trading — One-on-One Trading Mentorship",
   description:
-    "Structured one-on-one mentorship for gold traders — position sizing, discipline, and real feedback on every trade, before you click buy.",
+    "Structured one-on-one mentorship for gold, indexes, crypto, and stock traders — position sizing, discipline, and real feedback on every trade, before you click buy.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

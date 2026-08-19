@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Risk Disclaimer — Bunny Trading",
   description:
-    "Trading foreign exchange and commodities like gold (XAU/USD) carries a high level of risk. Read before using this site or its tools.",
+    "Trading gold, indexes, crypto, and stocks carries a high level of risk. Read before using this site or its tools.",
 };
 
 export default function RiskDisclaimer() {
@@ -16,11 +16,14 @@ export default function RiskDisclaimer() {
         </div>
         <div className="prose">
           <p>
-            Trading foreign exchange and commodities such as gold (XAU/USD)
-            on margin carries a high level of risk and may not be suitable
-            for everyone. It is possible to lose some or all of your initial
-            investment, and you should not trade with money you cannot
-            afford to lose.
+            Trading gold, indexes, cryptocurrency, and stocks (including
+            penny stocks) on margin carries a high level of risk and may
+            not be suitable for everyone. It is possible to lose some or
+            all of your initial investment, and you should not trade with
+            money you cannot afford to lose. Cryptocurrency and penny
+            stocks in particular carry additional risk from extreme
+            volatility and low liquidity, on top of the general risks of
+            trading on margin.
           </p>
           <p>
             Bunny Trading provides educational mentorship only. Nothing on

@@ -1,9 +1,15 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
 export default function AppleIcon() {
+  const logo = readFileSync(join(process.cwd(), "public", "logo.jpg")).toString(
+    "base64",
+  );
+
   return new ImageResponse(
     (
       <div
@@ -11,21 +17,16 @@ export default function AppleIcon() {
           width: "100%",
           height: "100%",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#15130F",
+          overflow: "hidden",
         }}
       >
-        <span
-          style={{
-            fontSize: 108,
-            fontWeight: 700,
-            color: "#C08A2E",
-            fontFamily: "sans-serif",
-          }}
-        >
-          B
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`data:image/jpeg;base64,${logo}`}
+          width={size.width}
+          height={size.height}
+          style={{ objectFit: "cover", objectPosition: "center 14%" }}
+        />
       </div>
     ),
     { ...size },

@@ -49,7 +49,7 @@ export default function Nav() {
 
         <Magnetic strength={0.25}>
           <Link href="/contact" className="nav-cta">
-            DM to Start
+            DM to Start<span className="cta-arrow">→</span>
           </Link>
         </Magnetic>
 

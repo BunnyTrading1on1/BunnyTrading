@@ -27,7 +27,7 @@ export default function OpengraphImage() {
             fontWeight: 700,
           }}
         >
-          One-on-one · XAU/USD
+          One-on-one · Gold, Indexes, Crypto &amp; Stocks
         </span>
         <span
           style={{

@@ -6,9 +6,15 @@ interface PhotoRevealProps {
   src: string;
   alt: string;
   focal?: string;
+  aspect?: string;
 }
 
-export default function PhotoReveal({ src, alt, focal = "center" }: PhotoRevealProps) {
+export default function PhotoReveal({
+  src,
+  alt,
+  focal = "center",
+  aspect = "4 / 3",
+}: PhotoRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -39,7 +45,11 @@ export default function PhotoReveal({ src, alt, focal = "center" }: PhotoRevealP
   }, []);
 
   return (
-    <div ref={ref} className={`photo-reveal${visible ? " is-visible" : ""}`}>
+    <div
+      ref={ref}
+      className={`photo-reveal${visible ? " is-visible" : ""}`}
+      style={{ aspectRatio: aspect }}
+    >
       <div
         className="photo-reveal-img"
         role="img"

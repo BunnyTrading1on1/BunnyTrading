@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroPhoto from "@/components/HeroPhoto";
+import PhotoReveal from "@/components/PhotoReveal";
 
 export const metadata: Metadata = {
   title: "About — Bunny Trading",
   description:
-    "One mentor, one method — rule-based XAU/USD mentorship built on position sizing, discipline, and honest feedback.",
+    "One mentor, one method — rule-based mentorship across gold, indexes, crypto, and stocks, built on position sizing, discipline, and honest feedback.",
 };
 
 export default function About() {
@@ -31,20 +32,50 @@ export default function About() {
       </header>
 
       <section className="line-top">
-        <div className="wrap">
+        <div className="wrap split-grid bio-grid">
           <Reveal>
-            <div className="section-head">
-              <span className="eyebrow">The method</span>
-              <h2>Rules first, charts second.</h2>
-              <p>
-                Every student works under the same non-negotiables: risk no
-                more than 3% per trade, size the position to the stop
-                &mdash; never the other way around, require at least 1:2
-                reward to risk, and write the reason down before entry, not
-                after. Position sizing isn&rsquo;t a suggestion here;
-                it&rsquo;s the first thing you learn and the thing every
-                trade review checks first.
-              </p>
+            <PhotoReveal
+              src="/images/bunny-portrait.jpg"
+              alt="Bunny, founder of Bunny Trading"
+              aspect="3 / 4"
+              focal="center 20%"
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <div>
+              <span className="eyebrow">Meet Bunny</span>
+              <h2>I&rsquo;ve made every mistake I teach against.</h2>
+              <div className="prose">
+                <p>
+                  Hi, my name is Bunny &mdash; proudly South African,
+                  and I&rsquo;ve been trading gold for a few years now.
+                  Almost all of what I teach came from mistakes I made
+                  myself before I learned to stop making them.
+                </p>
+                <p>
+                  Like most people, I started out sizing positions by feel,
+                  not by math. A good week made me overconfident; a bad
+                  week made me chase it back too fast. The turning point
+                  wasn&rsquo;t a big win &mdash; it was realizing every
+                  account-blowing mistake I&rsquo;d made traced back to the
+                  same root cause: I never had a rule I actually followed
+                  before I clicked buy.
+                </p>
+                <p>
+                  So I built one. Then I stress-tested it on my own money
+                  until it held up on the bad days, not just the good
+                  ones. That&rsquo;s the system I teach now &mdash; not
+                  because it&rsquo;s exciting, but because it&rsquo;s the
+                  thing that actually kept me in the game long enough to
+                  get good at this.
+                </p>
+                <p>
+                  I started mentoring because I got tired of watching
+                  people repeat the exact mistakes I made, alone, with no
+                  one checking their math before the trade instead of
+                  after.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -54,6 +85,42 @@ export default function About() {
         <div className="wrap">
           <Reveal>
             <div className="section-head">
+              <span className="eyebrow">The method</span>
+              <h2>Rules first, charts second.</h2>
+              <p>
+                Every student will work under a set of rules &mdash; for
+                example:
+              </p>
+            </div>
+          </Reveal>
+          <Reveal stagger>
+            <ul className="rules-list">
+              <li>
+                <span className="pt-num">01</span>
+                Risk no more than 3% per trade
+              </li>
+              <li>
+                <span className="pt-num">02</span>
+                Size the position to the stop &mdash; never the other way
+                around
+              </li>
+              <li>
+                <span className="pt-num">03</span>
+                Require at least 1:2 reward to risk
+              </li>
+              <li>
+                <span className="pt-num">04</span>
+                Write the reason down before entry, not after
+              </li>
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="line-top">
+        <div className="wrap split-grid">
+          <Reveal>
+            <div>
               <span className="eyebrow">Why one-on-one</span>
               <h2>Feedback on your trades, not the market&rsquo;s.</h2>
               <p>
@@ -66,8 +133,17 @@ export default function About() {
               </p>
             </div>
           </Reveal>
+          <Reveal delay={80}>
+            <PhotoReveal
+              src="/images/office-atmosphere.jpg"
+              alt="A quiet home trading office at night, where every submission gets reviewed personally"
+              focal="center 40%"
+            />
+          </Reveal>
         </div>
       </section>
+
+      <div className="gold-divider" aria-hidden="true" />
 
       <section className="line-top">
         <div className="wrap">
