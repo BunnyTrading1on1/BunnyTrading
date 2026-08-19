@@ -48,9 +48,10 @@ export default function About() {
               <div className="prose">
                 <p>
                   Hi, my name is Bunny &mdash; proudly South African,
-                  and I&rsquo;ve been trading gold for a few years now.
-                  Almost all of what I teach came from mistakes I made
-                  myself before I learned to stop making them.
+                  and I&rsquo;ve been trading gold and penny stocks for
+                  a few years now. Almost all of what I teach came from
+                  mistakes I made myself before I learned to stop making
+                  them.
                 </p>
                 <p>
                   Like most people, I started out sizing positions by feel,
