@@ -19,7 +19,7 @@ export default function About() {
           <Reveal>
             <div className="section-head">
               <span className="eyebrow">About</span>
-              <h2>One mentor. One method.</h2>
+              <h2>One mentor. One approach.</h2>
               <p>
                 Bunny Trading isn&rsquo;t a signal group and it isn&rsquo;t a
                 course. It&rsquo;s one-on-one mentorship built around a
