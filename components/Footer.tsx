@@ -16,6 +16,7 @@ export default function Footer() {
         </Magnetic>
       </div>
       <div className="wrap footer-legal">
+        <span className="copyright">&copy; 2026 Bunny Trading</span>
         <Link href="/risk-disclaimer">Risk Disclaimer</Link>
       </div>
     </footer>

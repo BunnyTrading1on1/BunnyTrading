@@ -77,10 +77,14 @@ nav .wrap {
   padding: 18px 32px;
 }
 .logo {
-  font-family: var(--font-display);
-  font-size: 20px;
-  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
+}
+.logo-img {
+  height: 44px;
+  width: auto;
+  border-radius: 4px;
 }
 .logo span {
   color: var(--gold);
@@ -525,6 +529,37 @@ section.line-top {
   color: var(--danger);
 }
 
+/* Floating WhatsApp contact button */
+.whatsapp-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 50;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.whatsapp-fab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 640px) {
+  .whatsapp-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
 /* Magnetic CTA wrapper — button eases toward the cursor */
 .magnetic {
   display: inline-block;
@@ -688,7 +723,25 @@ footer .note {
 .footer-legal {
   margin-top: 32px;
   padding-top: 24px;
+  padding-right: 88px;
   border-top: 1px solid #3a362b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .footer-legal {
+    padding-right: 0;
+    padding-bottom: 72px;
+  }
+}
+.footer-legal .copyright {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
 }
 .footer-legal a {
   font-family: var(--font-mono);
@@ -1280,9 +1333,8 @@ footer .cta:hover {
   .mobile-menu.is-open {
     max-height: 320px;
   }
-  .logo {
-    white-space: nowrap;
-    font-size: 18px;
+  .logo-img {
+    height: 36px;
   }
   nav .wrap {
     padding: 16px 24px;

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Magnetic from "@/components/Magnetic";
@@ -24,7 +25,14 @@ export default function Nav() {
     <nav>
       <div className="wrap">
         <Link href="/" className="logo">
-          BUNNY <span>TRADING</span>
+          <Image
+            src="/logo.jpg"
+            alt="Bunny Trading"
+            width={1024}
+            height={572}
+            priority
+            className="logo-img"
+          />
         </Link>
 
         <div className="links">
