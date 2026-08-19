@@ -1,17 +1,26 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import HeroParticles from "@/components/HeroParticles";
+import HeroPhoto from "@/components/HeroPhoto";
+import PhotoReveal from "@/components/PhotoReveal";
 
 export default function Home() {
   return (
     <>
       <header className="hero">
+        <HeroPhoto image="/images/hero-desk.jpg" />
+        <HeroParticles />
         <div className="wrap hero-grid">
           <div>
             <span className="eyebrow">One-on-one · XAU/USD</span>
-            <h1>
-              Trade the <span className="accent">rule,</span>
+            <h1 className="hero-title">
+              <span className="word">Trade</span>{" "}
+              <span className="word">the</span>{" "}
+              <span className="word accent">rule,</span>
               <br />
-              not the number.
+              <span className="word">not</span>{" "}
+              <span className="word">the</span>{" "}
+              <span className="word">number.</span>
             </h1>
             <p className="lede">
               Structured mentorship for gold traders — position sizing,
@@ -24,7 +33,7 @@ export default function Home() {
                 <div className="lbl">Starting Lots</div>
               </div>
               <div>
-                <div className="num">1%</div>
+                <div className="num">3%</div>
                 <div className="lbl">Max Risk / Trade</div>
               </div>
               <div>
@@ -53,7 +62,7 @@ export default function Home() {
                 Written reason <b>required</b> before entry
               </span>
               <span>
-                Stop at <b>$5</b> = risks <b>$5</b>
+                Stop at <b>100 pips</b> = risks <b>$10</b>
               </span>
             </div>
           </div>
@@ -115,6 +124,8 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="gold-divider" aria-hidden="true" />
+
       <section id="levels" className="line-top">
         <div className="wrap">
           <Reveal>
@@ -135,9 +146,9 @@ export default function Home() {
             <div className="feedback-card">
               <span className="tag">Sample review — Foundations tier</span>
               <p>
-                &ldquo;Your entry was fine, but you sized 0.03 lots against a
-                $5 stop on a $500 account — that&rsquo;s 3% risk on a rule
-                that says 1%. Re-run the position sizing formula and resend
+                &ldquo;Your entry was fine, but you sized 0.09 lots against a
+                $5 stop on a $500 account — that&rsquo;s 9% risk on a rule
+                that says 3%. Re-run the position sizing formula and resend
                 before your next trade.&rdquo;
               </p>
             </div>
@@ -157,6 +168,14 @@ export default function Home() {
                 entry with mentor feedback attached.
               </p>
             </div>
+          </Reveal>
+          <div className="split-grid">
+          <Reveal delay={60}>
+            <PhotoReveal
+              src="/images/hand-mouse.jpg"
+              alt="Close-up of a trader's hand at the desk, gold chart glowing on the monitor behind"
+              focal="center 55%"
+            />
           </Reveal>
           <Reveal delay={80}>
             <div className="portal">
@@ -203,6 +222,7 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
+          </div>
         </div>
       </section>
     </>

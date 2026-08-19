@@ -3,6 +3,26 @@ import { Resend } from "resend";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Per-instance in-memory limiter — Vercel runs multiple serverless instances,
+// so this caps abuse per-instance rather than globally, but stops a single
+// script from hammering the endpoint without needing an external store.
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const hits = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = hits.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    hits.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return false;
+  }
+
+  entry.count += 1;
+  return entry.count > RATE_LIMIT;
+}
+
 interface ContactBody {
   name?: string;
   email?: string;
@@ -13,6 +33,14 @@ interface ContactBody {
 }
 
 export async function POST(req: NextRequest) {
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      { error: "Too many messages sent — try again in a few minutes." },
+      { status: 429 },
+    );
+  }
+
   const body = (await req.json().catch(() => null)) as ContactBody | null;
 
   if (!body) {

@@ -87,9 +87,9 @@ export default function Pricing() {
           <div className="feedback-card">
             <span className="tag">Sample review — Foundations tier</span>
             <p>
-              &ldquo;Your entry was fine, but you sized 0.03 lots against a $5
-              stop on a $500 account — that&rsquo;s 3% risk on a rule that
-              says 1%. Re-run the position sizing formula and resend before
+              &ldquo;Your entry was fine, but you sized 0.09 lots against a $5
+              stop on a $500 account — that&rsquo;s 9% risk on a rule that
+              says 3%. Re-run the position sizing formula and resend before
               your next trade.&rdquo;
             </p>
           </div>

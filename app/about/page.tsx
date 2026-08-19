@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import HeroPhoto from "@/components/HeroPhoto";
 
 export const metadata: Metadata = {
   title: "About — Bunny Trading",
@@ -11,8 +12,9 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <section className="line-top">
-        <div className="wrap">
+      <header className="hero hero-compact">
+        <HeroPhoto image="/images/mentor-silhouette.jpg" focal="center 30%" />
+        <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
           <Reveal>
             <div className="section-head">
               <span className="eyebrow">About</span>
@@ -26,7 +28,7 @@ export default function About() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </header>
 
       <section className="line-top">
         <div className="wrap">
@@ -36,7 +38,7 @@ export default function About() {
               <h2>Rules first, charts second.</h2>
               <p>
                 Every student works under the same non-negotiables: risk no
-                more than 1% per trade, size the position to the stop
+                more than 3% per trade, size the position to the stop
                 &mdash; never the other way around, require at least 1:2
                 reward to risk, and write the reason down before entry, not
                 after. Position sizing isn&rsquo;t a suggestion here;
