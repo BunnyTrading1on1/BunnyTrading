@@ -3,6 +3,7 @@ import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
 import HeroPhoto from "@/components/HeroPhoto";
 import PhotoReveal from "@/components/PhotoReveal";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -163,6 +164,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <Testimonials limit={3} />
 
       <section id="journal" className="line-top">
         <div className="wrap">

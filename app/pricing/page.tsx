@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { TESTIMONIALS } from "@/lib/testimonials";
 
 export const metadata: Metadata = {
   title: "Gold Trading Mentorship Pricing — Bunny Trading",
@@ -141,6 +142,24 @@ export default function Pricing() {
             </span>
           </Link>
         </div>
+
+        <Reveal>
+          <div id="testimonials" className="section-head" style={{ marginTop: 88, scrollMarginTop: 100 }}>
+            <span className="eyebrow">In their own words</span>
+            <h2>What students say.</h2>
+          </div>
+        </Reveal>
+        <Reveal stagger>
+          <div className="testimonial-grid">
+            {TESTIMONIALS.map((t) => (
+              <div key={t.title} className="testimonial-card">
+                <p className="testimonial-title">&ldquo;{t.title}&rdquo;</p>
+                <p className="testimonial-quote">{t.quote}</p>
+                <span className="testimonial-attribution">{t.attribution}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
 
         <Reveal>
           <div className="section-head" style={{ marginTop: 56 }}>
