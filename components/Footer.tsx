@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <div className="wrap">
         <div>
-          <h3>Ready to start?</h3>
+          <h2>Ready to start?</h2>
           <div className="note">Month to month · No lock-in</div>
         </div>
         <Magnetic strength={0.3}>

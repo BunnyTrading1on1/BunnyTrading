@@ -27,7 +27,7 @@ export default function PositionSizing() {
         </div>
         <PositionSizingCalculator />
         <p style={{ marginTop: 32, fontFamily: "var(--font-mono)", fontSize: 13 }}>
-          <Link href="/blog/xauusd-position-sizing-guide" style={{ color: "var(--gold)" }}>
+          <Link href="/blog/xauusd-position-sizing-guide" style={{ color: "var(--gold-text)" }}>
             Read the full breakdown of this formula →
           </Link>
         </p>

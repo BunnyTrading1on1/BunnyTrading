@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
             collected beyond standard analytics. If you&rsquo;ve already
             sent a message and want it deleted, or have any other question
             about this policy, message through the{" "}
-            <a href="/contact" style={{ color: "var(--gold)" }}>
+            <a href="/contact" style={{ color: "var(--gold-text)" }}>
               contact form
             </a>{" "}
             or WhatsApp and it&rsquo;ll be handled directly. There&rsquo;s

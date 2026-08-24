@@ -166,7 +166,7 @@ export default function ActiveTraderPage() {
             >
               Start Active Trader<span className="cta-arrow">→</span>
             </Link>
-            <Link href="/pricing" style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: 13, textDecoration: "none" }}>
+            <Link href="/pricing" style={{ color: "var(--gold-text)", fontFamily: "var(--font-mono)", fontSize: 13, textDecoration: "none" }}>
               Compare all levels →
             </Link>
           </div>

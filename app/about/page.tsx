@@ -155,7 +155,7 @@ export default function About() {
               <span className="eyebrow">Ready to start?</span>
               <h2>See what each level includes.</h2>
               <p>
-                <Link href="/pricing" style={{ color: "var(--gold)" }}>
+                <Link href="/pricing" style={{ color: "var(--gold-text)" }}>
                   Compare Foundations, Active Trader, and Elite →
                 </Link>
               </p>

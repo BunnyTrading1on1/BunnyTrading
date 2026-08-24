@@ -166,7 +166,7 @@ export default function ElitePage() {
             <Link href="/contact?tier=Elite" className="tier-btn" style={{ padding: "14px 24px" }}>
               Start Elite<span className="cta-arrow">→</span>
             </Link>
-            <Link href="/pricing" style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: 13, textDecoration: "none" }}>
+            <Link href="/pricing" style={{ color: "var(--gold-text)", fontFamily: "var(--font-mono)", fontSize: 13, textDecoration: "none" }}>
               Compare all levels →
             </Link>
           </div>
