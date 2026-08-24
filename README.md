@@ -31,8 +31,10 @@ cp .env.local.example .env.local
 | `RESEND_API_KEY` | Yes | From [resend.com/api-keys](https://resend.com/api-keys) |
 | `CONTACT_EMAIL` | Yes | Inbox that DM submissions get sent to |
 | `CONTACT_FROM` | No | Sender address. Defaults to Resend's shared `onboarding@resend.dev`, which works fine but only delivers to the email you verified on your Resend account. Verify your own domain in Resend to send from your own address instead. |
+| `GOOGLE_SITE_VERIFICATION` | No | The verification string from Search Console's HTML tag method (search.google.com/search-console → Add property → HTML tag). Paste just the value, not the whole tag. |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | No | Your GA4 measurement ID (starts with `G-`) from analytics.google.com → Admin → Data Streams. Leaving it unset skips loading Google Analytics entirely. |
 
-`.env.local` is gitignored — never commit it.
+`.env.local` is gitignored — never commit it. Both of these also need to be added under the project's **Settings → Environment Variables** on Vercel to take effect in production.
 
 ## Deploying (Vercel)
 

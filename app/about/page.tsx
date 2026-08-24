@@ -6,9 +6,9 @@ import PhotoReveal from "@/components/PhotoReveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "About Your Gold Trading Mentor — Bunny Trading",
+  title: "About Your South African Gold Trading Mentor — Bunny Trading",
   description:
-    "One mentor, one method — rule-based mentorship across gold, indexes, crypto, and stocks, built on position sizing, discipline, and honest feedback.",
+    "One South African mentor, one method — rule-based mentorship across gold, indexes, crypto, and stocks, built on position sizing, discipline, and honest feedback.",
 };
 
 export default function About() {

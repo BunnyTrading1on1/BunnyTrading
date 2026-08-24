@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Bitter, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -15,6 +16,10 @@ const organizationJsonLd = {
   logo: `${SITE_URL}/logo.jpg`,
   description:
     "One-on-one trading mentorship for gold, indexes, crypto, and stock traders — position sizing, discipline, and real feedback on every trade.",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "ZA",
+  },
 };
 
 const anton = Anton({
@@ -40,8 +45,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Bunny Trading — One-on-One Trading Mentorship",
   description:
-    "Structured one-on-one mentorship for gold, indexes, crypto, and stock traders — position sizing, discipline, and real feedback on every trade, before you click buy.",
+    "Structured one-on-one mentorship for gold, indexes, crypto, and stock traders, from a South Africa-based mentor — position sizing, discipline, and real feedback on every trade, before you click buy.",
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -54,6 +64,22 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <Nav />
         {children}
         <Footer />
