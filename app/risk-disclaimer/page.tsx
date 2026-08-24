@@ -15,6 +15,7 @@ export default function RiskDisclaimer() {
         <div className="section-head">
           <span className="eyebrow">Please read</span>
           <h1>Risk Disclaimer</h1>
+          <p className="last-updated">Last updated: August 24, 2026</p>
         </div>
         <div className="prose">
           <p>

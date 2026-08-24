@@ -2,6 +2,24 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const UTM_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+];
+
+function formatUtm(utm: unknown): string {
+  if (!utm || typeof utm !== "object") return "";
+  const entries = UTM_KEYS.map((key) => {
+    const value = (utm as Record<string, unknown>)[key];
+    return typeof value === "string" && value.trim()
+      ? `${key}: ${value.trim().slice(0, 200)}`
+      : null;
+  }).filter(Boolean);
+  return entries.length > 0 ? `\nSource: ${entries.join(", ")}` : "";
+}
 
 // Per-instance in-memory limiter — Vercel runs multiple serverless instances,
 // so this caps abuse per-instance rather than globally, but stops a single
@@ -30,6 +48,7 @@ interface ContactBody {
   level?: string;
   message?: string;
   company?: string; // honeypot — real users never fill this in
+  utm?: Record<string, string>;
 }
 
 export async function POST(req: NextRequest) {
@@ -47,7 +66,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
 
-  const { name, email, location, level, message, company } = body;
+  const { name, email, location, level, message, company, utm } = body;
 
   if (company) {
     // Bot filled the honeypot field — pretend success, drop it silently.
@@ -100,7 +119,7 @@ export async function POST(req: NextRequest) {
       to,
       replyTo: email.trim(),
       subject: `New DM from ${name.trim()}${level ? ` — ${level}` : ""}`,
-      text: `From: ${name.trim()} <${email.trim()}>\nLocation: ${location?.trim() || "Not specified"}\nInterested in: ${level || "Not specified"}\n\n${message.trim()}`,
+      text: `From: ${name.trim()} <${email.trim()}>\nLocation: ${location?.trim() || "Not specified"}\nInterested in: ${level || "Not specified"}${formatUtm(utm)}\n\n${message.trim()}`,
     });
 
     if (error) {

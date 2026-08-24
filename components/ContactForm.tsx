@@ -8,6 +8,7 @@ import {
   type KeyboardEvent,
 } from "react";
 import { useSearchParams } from "next/navigation";
+import { UTM_STORAGE_KEY } from "@/components/UtmCapture";
 
 const LEVELS = ["Foundations", "Active Trader", "Elite"];
 const LEVEL_OPTIONS = [...LEVELS, "Not sure yet"];
@@ -87,11 +88,18 @@ export default function ContactForm() {
     setStatus("submitting");
     setError("");
 
+    let utm: Record<string, string> = {};
+    try {
+      utm = JSON.parse(window.sessionStorage.getItem(UTM_STORAGE_KEY) || "{}");
+    } catch {
+      // ignore malformed/missing UTM data
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, location, level, message, company }),
+        body: JSON.stringify({ name, email, location, level, message, company, utm }),
       });
       const data = await res.json();
 

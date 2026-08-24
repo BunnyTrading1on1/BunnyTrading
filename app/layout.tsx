@@ -6,6 +6,10 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BackToTop from "@/components/BackToTop";
+import ScrollProgress from "@/components/ScrollProgress";
+import CookieNotice from "@/components/CookieNotice";
+import UtmCapture from "@/components/UtmCapture";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const organizationJsonLd = {
@@ -80,10 +84,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </Script>
           </>
         )}
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <ScrollProgress />
+        <UtmCapture />
         <Nav />
-        {children}
+        <main id="main-content">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <BackToTop />
+        <CookieNotice />
         <Analytics />
       </body>
     </html>
