@@ -1,11 +1,21 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import * as THREE from "three";
+import {
+  BufferAttribute,
+  BufferGeometry,
+  Clock,
+  Color,
+  PerspectiveCamera,
+  Points,
+  PointsMaterial,
+  Scene,
+  WebGLRenderer,
+} from "three";
 
 const PARTICLE_COUNT = 140;
-const GOLD = new THREE.Color("#C08A2E");
-const GOLD_LIGHT = new THREE.Color("#D9A94A");
+const GOLD = new Color("#C08A2E");
+const GOLD_LIGHT = new Color("#D9A94A");
 
 export default function HeroParticles() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -21,11 +31,11 @@ export default function HeroParticles() {
     const width = mount.clientWidth;
     const height = mount.clientHeight;
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 100);
+    const scene = new Scene();
+    const camera = new PerspectiveCamera(50, width / height, 0.1, 100);
     camera.position.z = 20;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     mount.appendChild(renderer.domElement);
@@ -47,11 +57,11 @@ export default function HeroParticles() {
       speeds[i] = 0.15 + Math.random() * 0.35;
     }
 
-    const geometry = new THREE.BufferGeometry();
-    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-    geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+    const geometry = new BufferGeometry();
+    geometry.setAttribute("position", new BufferAttribute(positions, 3));
+    geometry.setAttribute("color", new BufferAttribute(colors, 3));
 
-    const material = new THREE.PointsMaterial({
+    const material = new PointsMaterial({
       size: 0.16,
       vertexColors: true,
       transparent: true,
@@ -59,15 +69,15 @@ export default function HeroParticles() {
       sizeAttenuation: true,
     });
 
-    const points = new THREE.Points(geometry, material);
+    const points = new Points(geometry, material);
     scene.add(points);
 
     let frameId: number;
-    const clock = new THREE.Clock();
+    const clock = new Clock();
 
     const animate = () => {
       const elapsed = clock.getElapsedTime();
-      const pos = geometry.attributes.position as THREE.BufferAttribute;
+      const pos = geometry.attributes.position as BufferAttribute;
 
       for (let i = 0; i < PARTICLE_COUNT; i++) {
         const y = pos.getY(i);

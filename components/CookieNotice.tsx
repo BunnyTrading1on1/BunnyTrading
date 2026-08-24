@@ -27,7 +27,7 @@ export default function CookieNotice() {
         This site uses cookies for basic analytics (Google Analytics, Vercel
         Analytics) to see how visitors use it. No personal data is sold.{" "}
         <Link href="/privacy-policy" style={{ color: "var(--gold)" }}>
-          Learn more
+          Read our privacy policy
         </Link>
       </p>
       <button type="button" className="cookie-notice-btn" onClick={dismiss}>

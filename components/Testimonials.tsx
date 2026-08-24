@@ -20,7 +20,7 @@ export default function Testimonials({
             <h2>{heading}</h2>
             {limit && limit < TESTIMONIALS.length && (
               <p>
-                <Link href="/pricing#testimonials" style={{ color: "var(--gold)" }}>
+                <Link href="/pricing#testimonials" style={{ color: "var(--gold-text)" }}>
                   Read more student feedback →
                 </Link>
               </p>

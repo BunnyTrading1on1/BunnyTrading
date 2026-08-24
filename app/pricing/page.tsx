@@ -95,7 +95,7 @@ export default function Pricing() {
         <div className="tiers">
           <Link href="/pricing/foundations" className="tier">
             <span className="lvl">Level 01</span>
-            <h3>Foundations</h3>
+            <h2>Foundations</h2>
             <div className="price">
               $199<small> / mo</small>
             </div>
@@ -111,7 +111,7 @@ export default function Pricing() {
           </Link>
           <Link href="/pricing/active-trader" className="tier featured">
             <span className="lvl">Level 02 · Most Take This</span>
-            <h3>Active Trader</h3>
+            <h2>Active Trader</h2>
             <div className="price">
               $399<small> / mo</small>
             </div>
@@ -127,7 +127,7 @@ export default function Pricing() {
           </Link>
           <Link href="/pricing/elite" className="tier">
             <span className="lvl">Level 03</span>
-            <h3>Elite</h3>
+            <h2>Elite</h2>
             <div className="price">
               $999<small> / mo</small>
             </div>

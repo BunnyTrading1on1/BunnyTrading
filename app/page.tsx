@@ -141,7 +141,7 @@ export default function Home() {
               <p>
                 Three levels of mentorship, from written trade reviews to
                 unlimited live calls.{" "}
-                <Link href="/pricing" style={{ color: "var(--gold)" }}>
+                <Link href="/pricing" style={{ color: "var(--gold-text)" }}>
                   See full pricing →
                 </Link>
               </p>

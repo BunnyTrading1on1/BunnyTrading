@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 interface HeroPhotoProps {
@@ -34,11 +35,16 @@ export default function HeroPhoto({ image, focal = "center 42%" }: HeroPhotoProp
 
   return (
     <div className="hero-photo-wrap" aria-hidden="true">
-      <div
-        ref={photoRef}
-        className="hero-photo"
-        style={{ backgroundImage: `url(${image})`, backgroundPosition: focal }}
-      />
+      <div ref={photoRef} className="hero-photo">
+        <Image
+          src={image}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: focal }}
+        />
+      </div>
       <div className="hero-scrim" />
     </div>
   );

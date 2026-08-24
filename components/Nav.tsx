@@ -32,6 +32,7 @@ export default function Nav() {
             width={1024}
             height={572}
             priority
+            sizes="64px"
             className="logo-img"
           />
         </Link>
