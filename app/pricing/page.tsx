@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Pricing — Bunny Trading",
@@ -8,14 +9,82 @@ export const metadata: Metadata = {
     "Three levels of one-on-one gold trading mentorship: Foundations, Active Trader, and Elite.",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is this only for gold (XAU/USD)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Gold is my specialty and where the core curriculum lives, but I also mentor traders on indexes, crypto, and stocks (including penny stocks). Foundations and Active Trader are built around XAUUSD by default because that's where I have the deepest expertise — if your focus is elsewhere, we adapt the same structure (position sizing, risk management, psychology) to your instrument from the first call. Elite has the most built-in flexibility since we're building a custom plan from day one. The position sizing tool itself is XAUUSD-specific math, though — other instruments get sized properly in your reviews, not through that calculator.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What actually happens after I DM you?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You'll get a reply within 24 hours. From there we schedule a short call — 30 minutes, no more: I confirm you've got a live or demo account ready, we check your broker and position sizing numbers, I walk you through the three tiers and which fits, you pick a tier and get your welcome package, and we set your first homework deadline or call slot. No sales pitch, no upsell — just whether this is actually right for you, and when you start.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need a funded or prop firm account first?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No — you can start on a demo. Plenty of students start with $1,000–$5,000 on a live account instead; both work. Demo money doesn't teach real emotional discipline — fear and greed hit differently when it's your own money on the line. For prop firm prep specifically (Active Trader), we start on whatever account you have and scale toward an evaluation once the system's proven out.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I cancel anytime?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — month to month, no lock-in. You pay for the month you're in; tell me before the next billing date if you're stopping. If you leave and want to come back later, you start over — there's no pausing a membership.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's the actual difference between levels?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Foundations is independent learning — written feedback only, no calls, slower but cheaper, best if your schedule doesn't allow real-time coaching. Active Trader adds accountability — one call a week, WhatsApp feedback during market hours, faster progress, the level most people take. Elite is real-time — unlimited calls, priority access, watching trades happen live. All three teach the same setups and rules; what changes is how much hand-holding and speed of feedback you get.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I switch levels later?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, anytime. Upgrading mid-month means paying the difference for the remaining days; downgrading takes effect on the next billing cycle. Most people stay where they start, but some move up after a few months once they've seen the system work, and some move down if life gets busier.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What if I miss a week's homework or a call?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "On Foundations, missed homework has no make-up — you're paying for a system that only works if you do it, and missing a week just resets your own progress by a week. On Active Trader, a missed call is gone (though I'll share notes); the weekly rhythm is part of what makes it work. Elite has more flexibility since you're driving the schedule — a missed call gets rescheduled — but consistently missing homework is still on you to fix.",
+      },
+    },
+  ],
+};
+
 export default function Pricing() {
   return (
     <section className="line-top">
       <div className="wrap">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
         <Reveal>
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Pricing" }]} />
           <div className="section-head">
             <span className="eyebrow">Pick your level</span>
-            <h2>What changes is my time.</h2>
+            <h1>What changes is my time.</h1>
             <p>
               Every level teaches you to read the market yourself. Month to
               month, no lock-in.

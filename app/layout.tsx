@@ -5,6 +5,17 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.jpg`,
+  description:
+    "One-on-one trading mentorship for gold, indexes, crypto, and stock traders — position sizing, discipline, and real feedback on every trade.",
+};
 
 const anton = Anton({
   variable: "--font-anton",
@@ -26,7 +37,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bunny-trading.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: "Bunny Trading — One-on-One Trading Mentorship",
   description:
     "Structured one-on-one mentorship for gold, indexes, crypto, and stock traders — position sizing, discipline, and real feedback on every trade, before you click buy.",
@@ -39,6 +50,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${anton.variable} ${bitter.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Nav />
         {children}
         <Footer />

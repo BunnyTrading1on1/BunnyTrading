@@ -241,9 +241,31 @@ section.line-top {
   max-width: 640px;
   margin-bottom: 48px;
 }
+.section-head h1,
 .section-head h2 {
   font-size: clamp(30px, 4vw, 44px);
   margin-top: 10px;
+}
+.breadcrumbs {
+  display: block;
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+.breadcrumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  color: var(--gold);
+}
+.breadcrumbs [aria-current="page"] {
+  color: var(--ink-2);
+}
+.breadcrumbs .crumb-sep {
+  margin: 0 6px;
+  opacity: 0.5;
 }
 .section-head p {
   color: var(--ink-2);
@@ -433,6 +455,40 @@ section.line-top {
   font-style: italic;
   color: var(--ink-2);
   font-size: 15px;
+}
+.related-card {
+  display: block;
+  background: var(--white);
+  border-left: 4px solid var(--gold);
+  padding: 22px 26px;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 8px 24px -16px rgba(20, 18, 14, 0.25);
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.related-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -20px rgba(20, 18, 14, 0.35);
+}
+.related-card .tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  display: block;
+}
+.related-card p {
+  color: var(--ink-2);
+  font-size: 15px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .related-card:hover {
+    transform: none;
+  }
 }
 
 /* CALCULATOR */
@@ -1276,11 +1332,21 @@ footer .note {
 .hero-compact {
   padding: 88px 0 96px;
 }
+.hero-compact .section-head h1,
 .hero-compact .section-head h2 {
   color: var(--cream);
 }
 .hero-compact .section-head p {
   color: rgba(243, 238, 228, 0.82);
+}
+.hero-compact .breadcrumbs {
+  color: rgba(243, 238, 228, 0.68);
+}
+.hero-compact .breadcrumbs a {
+  color: rgba(243, 238, 228, 0.68);
+}
+.hero-compact .breadcrumbs [aria-current="page"] {
+  color: var(--cream);
 }
 
 /* Drifting gold particle field, above the photo */

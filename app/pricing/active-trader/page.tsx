@@ -1,26 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedLinks from "@/components/RelatedLinks";
+import { serviceSchema } from "@/lib/serviceSchema";
+
+const description =
+  "Active Trader: weekly 1-on-1 calls, real-time WhatsApp feedback, and live trade corrections — $399/mo.";
 
 export const metadata: Metadata = {
   title: "Active Trader — Bunny Trading",
-  description:
-    "Active Trader: weekly 1-on-1 calls, real-time WhatsApp feedback, and live trade corrections — $399/mo.",
+  description,
 };
+
+const jsonLd = serviceSchema({
+  name: "Active Trader",
+  description,
+  price: 399,
+  path: "/pricing/active-trader",
+});
 
 export default function ActiveTraderPage() {
   return (
     <section className="line-top">
       <div className="wrap">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Reveal>
-          <p style={{ marginBottom: 24 }}>
-            <Link href="/pricing" style={{ color: "var(--muted)", fontFamily: "var(--font-mono)", fontSize: 13, textDecoration: "none" }}>
-              ← Back to all levels
-            </Link>
-          </p>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Pricing", href: "/pricing" },
+              { label: "Active Trader" },
+            ]}
+          />
           <div className="section-head">
             <span className="eyebrow">Level 02 · Most take this</span>
-            <h2>Active Trader</h2>
+            <h1>Active Trader</h1>
             <div className="price" style={{ margin: "12px 0 20px" }}>
               $399<small> / mo</small>
             </div>
@@ -118,6 +136,26 @@ export default function ActiveTraderPage() {
             <li>Most mentees &mdash; this is the tier that delivers the biggest shift in discipline and results.</li>
           </ul>
         </Reveal>
+
+        <RelatedLinks
+          items={[
+            {
+              href: "/pricing/foundations",
+              label: "Level 01",
+              desc: "Not ready for weekly calls yet? Foundations covers the same fundamentals, written-only.",
+            },
+            {
+              href: "/pricing/elite",
+              label: "Level 03",
+              desc: "Want unlimited calls and priority access? See what Elite adds on top of Active Trader.",
+            },
+            {
+              href: "/position-sizing",
+              label: "Free tool",
+              desc: "Try the XAUUSD position sizing calculator every review is checked against.",
+            },
+          ]}
+        />
 
         <Reveal delay={140}>
           <div style={{ marginTop: 48, display: "flex", gap: 20, flexWrap: "wrap", alignItems: "center" }}>

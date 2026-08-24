@@ -1,26 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedLinks from "@/components/RelatedLinks";
+import { serviceSchema } from "@/lib/serviceSchema";
+
+const description =
+  "Foundations: weekly homework, written trade reviews, and risk management education built around your own account — $199/mo.";
 
 export const metadata: Metadata = {
   title: "Foundations — Bunny Trading",
-  description:
-    "Foundations: weekly homework, written trade reviews, and risk management education built around your own account — $199/mo.",
+  description,
 };
+
+const jsonLd = serviceSchema({
+  name: "Foundations",
+  description,
+  price: 199,
+  path: "/pricing/foundations",
+});
 
 export default function FoundationsPage() {
   return (
     <section className="line-top">
       <div className="wrap">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Reveal>
-          <p style={{ marginBottom: 24 }}>
-            <Link href="/pricing" style={{ color: "var(--muted)", fontFamily: "var(--font-mono)", fontSize: 13, textDecoration: "none" }}>
-              ← Back to all levels
-            </Link>
-          </p>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Pricing", href: "/pricing" },
+              { label: "Foundations" },
+            ]}
+          />
           <div className="section-head">
             <span className="eyebrow">Level 01</span>
-            <h2>Foundations</h2>
+            <h1>Foundations</h1>
             <div className="price" style={{ margin: "12px 0 20px" }}>
               $199<small> / mo</small>
             </div>
@@ -121,6 +139,26 @@ export default function FoundationsPage() {
             <li>People with schedules that don&rsquo;t align with real-time mentorship.</li>
           </ul>
         </Reveal>
+
+        <RelatedLinks
+          items={[
+            {
+              href: "/pricing/active-trader",
+              label: "Level 02",
+              desc: "Ready for real-time feedback instead of written-only reviews? See what Active Trader adds.",
+            },
+            {
+              href: "/position-sizing",
+              label: "Free tool",
+              desc: "Try the XAUUSD position sizing calculator every Foundations review is checked against.",
+            },
+            {
+              href: "/about",
+              label: "About",
+              desc: "Meet Bunny and the rule-based method behind every tier.",
+            },
+          ]}
+        />
 
         <Reveal delay={140}>
           <div style={{ marginTop: 48, display: "flex", gap: 20, flexWrap: "wrap", alignItems: "center" }}>

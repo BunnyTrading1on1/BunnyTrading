@@ -3,6 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroPhoto from "@/components/HeroPhoto";
 import PhotoReveal from "@/components/PhotoReveal";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "About — Bunny Trading",
@@ -17,9 +18,10 @@ export default function About() {
         <HeroPhoto image="/images/mentor-silhouette.jpg" focal="center 30%" />
         <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
           <Reveal>
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
             <div className="section-head">
               <span className="eyebrow">About</span>
-              <h2>One mentor. One approach.</h2>
+              <h1>One mentor. One approach.</h1>
               <p>
                 Bunny Trading isn&rsquo;t a signal group and it isn&rsquo;t a
                 course. It&rsquo;s one-on-one mentorship built around a

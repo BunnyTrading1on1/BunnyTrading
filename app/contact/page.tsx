@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contact — Bunny Trading",
@@ -13,9 +14,10 @@ export default function ContactPage() {
     <section className="line-top">
       <div className="wrap contact-grid">
         <div className="contact-aside">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
           <div className="section-head">
             <span className="eyebrow">DM to start</span>
-            <h2>Send a message.</h2>
+            <h1>Send a message.</h1>
             <p>
               Tell me a bit about where you&rsquo;re at and what you&rsquo;re
               looking for — I reply within 24 hours.

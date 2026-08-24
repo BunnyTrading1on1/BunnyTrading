@@ -1,26 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedLinks from "@/components/RelatedLinks";
+import { serviceSchema } from "@/lib/serviceSchema";
+
+const description =
+  "Elite: unlimited calls, live session access, and priority replies — the fastest feedback loop available, $999/mo.";
 
 export const metadata: Metadata = {
   title: "Elite — Bunny Trading",
-  description:
-    "Elite: unlimited calls, live session access, and priority replies — the fastest feedback loop available, $999/mo.",
+  description,
 };
+
+const jsonLd = serviceSchema({
+  name: "Elite",
+  description,
+  price: 999,
+  path: "/pricing/elite",
+});
 
 export default function ElitePage() {
   return (
     <section className="line-top">
       <div className="wrap">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Reveal>
-          <p style={{ marginBottom: 24 }}>
-            <Link href="/pricing" style={{ color: "var(--muted)", fontFamily: "var(--font-mono)", fontSize: 13, textDecoration: "none" }}>
-              ← Back to all levels
-            </Link>
-          </p>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Pricing", href: "/pricing" },
+              { label: "Elite" },
+            ]}
+          />
           <div className="section-head">
             <span className="eyebrow">Level 03</span>
-            <h2>Elite</h2>
+            <h1>Elite</h1>
             <div className="price" style={{ margin: "12px 0 20px" }}>
               $999<small> / mo</small>
             </div>
@@ -122,6 +140,26 @@ export default function ElitePage() {
             <li>Traders who&rsquo;ve proven they can stick to rules and are ready for the next level.</li>
           </ul>
         </Reveal>
+
+        <RelatedLinks
+          items={[
+            {
+              href: "/pricing/active-trader",
+              label: "Level 02",
+              desc: "Not sure Elite is the right fit yet? Active Trader is the tier most people start with.",
+            },
+            {
+              href: "/about",
+              label: "About",
+              desc: "Meet Bunny and the rule-based method behind every tier.",
+            },
+            {
+              href: "/position-sizing",
+              label: "Free tool",
+              desc: "Try the XAUUSD position sizing calculator every review is checked against.",
+            },
+          ]}
+        />
 
         <Reveal delay={140}>
           <div style={{ marginTop: 48, display: "flex", gap: 20, flexWrap: "wrap", alignItems: "center" }}>

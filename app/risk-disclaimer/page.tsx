@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Risk Disclaimer — Bunny Trading",
@@ -10,9 +11,10 @@ export default function RiskDisclaimer() {
   return (
     <section className="line-top">
       <div className="wrap">
+        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Risk Disclaimer" }]} />
         <div className="section-head">
           <span className="eyebrow">Please read</span>
-          <h2>Risk Disclaimer</h2>
+          <h1>Risk Disclaimer</h1>
         </div>
         <div className="prose">
           <p>

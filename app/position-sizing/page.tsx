@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PositionSizingCalculator from "@/components/PositionSizingCalculator";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "XAUUSD Position Sizing Tool — Bunny Trading",
@@ -11,9 +12,10 @@ export default function PositionSizing() {
   return (
     <section className="line-top">
       <div className="wrap">
+        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Sizing Tool" }]} />
         <div className="section-head">
           <span className="eyebrow">Try it live · Built for XAUUSD</span>
-          <h2>XAUUSD position sizing, worked out for you.</h2>
+          <h1>XAUUSD position sizing, worked out for you.</h1>
           <p>
             The formula behind every gold trade review — turned into a
             tool you can use before every trade. Change the numbers below.
