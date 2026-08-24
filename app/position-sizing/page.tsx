@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PositionSizingCalculator from "@/components/PositionSizingCalculator";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -25,6 +26,11 @@ export default function PositionSizing() {
           </p>
         </div>
         <PositionSizingCalculator />
+        <p style={{ marginTop: 32, fontFamily: "var(--font-mono)", fontSize: 13 }}>
+          <Link href="/blog/xauusd-position-sizing-guide" style={{ color: "var(--gold)" }}>
+            Read the full breakdown of this formula →
+          </Link>
+        </p>
       </div>
     </section>
   );
