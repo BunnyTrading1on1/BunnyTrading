@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Contact — Bunny Trading",
+  title: "Contact — Gold Trading Mentorship | Bunny Trading",
   description:
     "DM to start — send a message and get a reply within 24 hours.",
 };

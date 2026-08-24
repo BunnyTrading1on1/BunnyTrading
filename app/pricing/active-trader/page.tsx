@@ -9,7 +9,7 @@ const description =
   "Active Trader: weekly 1-on-1 calls, real-time WhatsApp feedback, and live trade corrections — $399/mo.";
 
 export const metadata: Metadata = {
-  title: "Active Trader — Bunny Trading",
+  title: "Active Trader — Gold Trading Mentorship | Bunny Trading",
   description,
 };
 

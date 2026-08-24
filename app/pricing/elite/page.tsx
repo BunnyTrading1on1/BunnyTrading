@@ -9,7 +9,7 @@ const description =
   "Elite: unlimited calls, live session access, and priority replies — the fastest feedback loop available, $999/mo.";
 
 export const metadata: Metadata = {
-  title: "Elite — Bunny Trading",
+  title: "Elite — Gold Trading Mentorship | Bunny Trading",
   description,
 };
 

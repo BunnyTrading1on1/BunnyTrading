@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Pricing — Bunny Trading",
+  title: "Gold Trading Mentorship Pricing — Bunny Trading",
   description:
     "Three levels of one-on-one gold trading mentorship: Foundations, Active Trader, and Elite.",
 };

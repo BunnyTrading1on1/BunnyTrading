@@ -9,7 +9,7 @@ const description =
   "Foundations: weekly homework, written trade reviews, and risk management education built around your own account — $199/mo.";
 
 export const metadata: Metadata = {
-  title: "Foundations — Bunny Trading",
+  title: "Foundations — Gold Trading Mentorship | Bunny Trading",
   description,
 };
 
