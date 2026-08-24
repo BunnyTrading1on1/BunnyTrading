@@ -154,7 +154,7 @@ export default function ContactForm() {
         </button>
       )}
 
-      <div className="step" key={step}>
+      <div className="form-step" key={step}>
         <label className="step-question" htmlFor={step !== "level" ? step : undefined}>
           {QUESTIONS[step]}
           {step === "location" && <span className="step-optional">(optional)</span>}

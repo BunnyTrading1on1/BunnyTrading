@@ -522,8 +522,8 @@ section.line-top {
 .field input,
 .field select,
 .field textarea,
-.step input,
-.step textarea {
+.form-step input,
+.form-step textarea {
   width: 100%;
   background: var(--ink-2);
   border: 1px solid #3a362b;
@@ -552,8 +552,8 @@ section.line-top {
 .field input:focus,
 .field select:focus,
 .field textarea:focus,
-.step input:focus,
-.step textarea:focus {
+.form-step input:focus,
+.form-step textarea:focus {
   outline: none;
   border-color: var(--gold);
 }
@@ -888,7 +888,7 @@ section.line-top {
 }
 
 /* MULTI-STEP CONTACT FORM */
-.step textarea {
+.form-step textarea {
   resize: vertical;
 }
 .step-progress {
@@ -926,7 +926,7 @@ section.line-top {
 .step-back:hover {
   color: var(--gold);
 }
-.step {
+.form-step {
   animation: step-in 0.25s ease;
 }
 @keyframes step-in {
@@ -1000,7 +1000,7 @@ section.line-top {
   color: var(--gold);
 }
 @media (prefers-reduced-motion: reduce) {
-  .step {
+  .form-step {
     animation: none;
   }
 }
