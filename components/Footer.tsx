@@ -17,7 +17,10 @@ export default function Footer() {
       </div>
       <div className="wrap footer-legal">
         <span className="copyright">&copy; 2026 Bunny Trading</span>
-        <Link href="/risk-disclaimer">Risk Disclaimer</Link>
+        <div style={{ display: "flex", gap: 20 }}>
+          <Link href="/risk-disclaimer">Risk Disclaimer</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+        </div>
       </div>
     </footer>
   );

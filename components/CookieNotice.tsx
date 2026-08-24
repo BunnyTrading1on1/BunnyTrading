@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "bt_cookie_notice_dismissed";
@@ -24,7 +25,10 @@ export default function CookieNotice() {
     <div className="cookie-notice" role="status">
       <p>
         This site uses cookies for basic analytics (Google Analytics, Vercel
-        Analytics) to see how visitors use it. No personal data is sold.
+        Analytics) to see how visitors use it. No personal data is sold.{" "}
+        <Link href="/privacy-policy" style={{ color: "var(--gold)" }}>
+          Learn more
+        </Link>
       </p>
       <button type="button" className="cookie-notice-btn" onClick={dismiss}>
         Got it

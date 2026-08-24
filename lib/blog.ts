@@ -31,6 +31,30 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-08-24",
     displayDate: "August 24, 2026",
   },
+  {
+    slug: "reward-to-risk-ratio-minimum",
+    title: "Why 1:2 Reward-to-Risk Is a Minimum, Not a Suggestion",
+    description:
+      "A 1:2 minimum isn't arbitrary — it's the line where being right less than half the time can still be profitable. Here's the math behind the rule.",
+    date: "2026-08-24",
+    displayDate: "August 24, 2026",
+  },
+  {
+    slug: "written-reason-before-entry",
+    title: "The Written Reason Rule: Why I Won't Review a Trade Without One",
+    description:
+      "If you can't explain a trade in one sentence before you take it, you don't have a setup — you have a hunch dressed up as one.",
+    date: "2026-08-24",
+    displayDate: "August 24, 2026",
+  },
+  {
+    slug: "revenge-trading-after-a-loss",
+    title: "Revenge Trading: The Pattern I Catch Most in Reviews",
+    description:
+      "Revenge trades don't look reckless from the inside — they look like conviction. Here's how to tell the difference before you click buy.",
+    date: "2026-08-24",
+    displayDate: "August 24, 2026",
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
