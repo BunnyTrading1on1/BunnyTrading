@@ -7,7 +7,7 @@ export default function NotFound() {
         <span className="eyebrow">Error 404</span>
         <h2>Stopped out.</h2>
         <p>
-          That page doesn&rsquo;t exist &mdash; or it moved. No harm done;
+          That page doesn&rsquo;t exist, or it moved. No harm done;
           the loss here is zero.
         </p>
         <div className="notfound-links">

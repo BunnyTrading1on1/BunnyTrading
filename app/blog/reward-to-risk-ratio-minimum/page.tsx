@@ -8,7 +8,7 @@ import { articleSchema } from "@/lib/articleSchema";
 const post = getPostBySlug("reward-to-risk-ratio-minimum")!;
 
 export const metadata: Metadata = {
-  title: `${post.title} — Bunny Trading`,
+  title: `${post.title} | Bunny Trading`,
   description: post.description,
 };
 
@@ -46,7 +46,7 @@ export default function RewardToRiskPost() {
               first rules every student gets, and it&rsquo;s also one of the
               first ones people quietly water down once a setup they like
               doesn&rsquo;t quite meet it. The number isn&rsquo;t arbitrary
-              though &mdash; it&rsquo;s the line where your win rate stops
+              though. It&rsquo;s the line where your win rate stops
               being the thing that determines whether you&rsquo;re
               profitable.
             </p>
@@ -55,8 +55,8 @@ export default function RewardToRiskPost() {
             <p>
               At 1:1, you need to win more than half your trades just to
               break even before costs. At 1:2, the math flips: you can be
-              right less than half the time &mdash; as low as 34&ndash;35%
-              &mdash; and still come out ahead, because your winners are
+              right less than half the time (as low as 34 to 35%)
+              and still come out ahead, because your winners are
               worth twice your losers. That gap between &ldquo;needs to be
               right most of the time&rdquo; and &ldquo;can be wrong most of
               the time&rdquo; is the entire reason this rule exists. It
@@ -67,12 +67,12 @@ export default function RewardToRiskPost() {
             <h2>Why traders shrink it anyway</h2>
             <p>
               The setup that&rsquo;s only offering 1:1.3 usually looks
-              fine in the moment &mdash; the structure&rsquo;s there, the
+              fine in the moment. The structure&rsquo;s there, the
               level&rsquo;s clean, it just doesn&rsquo;t have room to run
               to a full 1:2 target before the next resistance. So the
               temptation is to take it anyway and call it close enough.
               It isn&rsquo;t. A ratio requirement only protects you if you
-              actually hold the line on it &mdash; the moment it becomes
+              actually hold the line on it. The moment it becomes
               negotiable, it stops doing the one job it has.
             </p>
             <p>
@@ -86,11 +86,11 @@ export default function RewardToRiskPost() {
             <h2>What this looks like in a review</h2>
             <p>
               When I&rsquo;m checking a trade against this rule, I&rsquo;m
-              not just looking at the number you wrote down &mdash;
+              not just looking at the number you wrote down.
               I&rsquo;m checking whether the target was realistic given the
               structure, or whether it was picked backwards to make the
               ratio look right. A 1:2 target sitting past three levels of
-              resistance isn&rsquo;t a real 1:2 &mdash; it&rsquo;s a number
+              resistance isn&rsquo;t a real 1:2. It&rsquo;s a number
               on paper that price was never likely to reach. The rule only
               works if the target is honest.
             </p>

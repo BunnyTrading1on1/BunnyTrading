@@ -5,9 +5,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { BLOG_POSTS } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — Gold Trading Mentorship | Bunny Trading",
+  title: "Blog | Gold Trading Mentorship | Bunny Trading",
   description:
-    "Position sizing, risk management, and trading psychology — written from the same rules every mentorship review is checked against.",
+    "Position sizing, risk management, and trading psychology, written from the same rules every mentorship review is checked against.",
 };
 
 export default function BlogIndex() {
@@ -20,7 +20,7 @@ export default function BlogIndex() {
             <span className="eyebrow">From the desk</span>
             <h1>Rules, not predictions.</h1>
             <p>
-              Position sizing, risk management, and trading psychology —
+              Position sizing, risk management, and trading psychology,
               written from the same rules every mentorship review is checked
               against.
             </p>

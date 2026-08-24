@@ -118,7 +118,7 @@ export default function ContactForm() {
     return (
       <div className="contact-success">
         <span className="eyebrow">Message sent</span>
-        <p>Thanks — I&rsquo;ll get back to you within 24 hours.</p>
+        <p>Thanks, I&rsquo;ll get back to you within 24 hours.</p>
       </div>
     );
   }

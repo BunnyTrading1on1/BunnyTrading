@@ -19,7 +19,7 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/logo.jpg`,
   description:
-    "One-on-one trading mentorship for gold, indexes, crypto, and stock traders — position sizing, discipline, and real feedback on every trade.",
+    "One-on-one trading mentorship for gold, indexes, crypto, and stock traders: position sizing, discipline, and real feedback on every trade.",
   address: {
     "@type": "PostalAddress",
     addressCountry: "ZA",
@@ -47,9 +47,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Bunny Trading — One-on-One Trading Mentorship",
+  title: "Bunny Trading | One-on-One Trading Mentorship",
   description:
-    "Structured one-on-one mentorship for gold, indexes, crypto, and stock traders, from a South Africa-based mentor — position sizing, discipline, and real feedback on every trade, before you click buy.",
+    "Structured one-on-one mentorship for gold, indexes, crypto, and stock traders, from a South Africa-based mentor. Position sizing, discipline, and real feedback on every trade, before you click buy.",
   ...(process.env.GOOGLE_SITE_VERIFICATION
     ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
     : {}),

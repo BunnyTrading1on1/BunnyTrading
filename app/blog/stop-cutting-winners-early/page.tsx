@@ -8,7 +8,7 @@ import { articleSchema } from "@/lib/articleSchema";
 const post = getPostBySlug("stop-cutting-winners-early")!;
 
 export const metadata: Metadata = {
-  title: `${post.title} — Bunny Trading`,
+  title: `${post.title} | Bunny Trading`,
   description: post.description,
 };
 
@@ -43,7 +43,7 @@ export default function CuttingWinnersPost() {
           <div className="prose">
             <p>
               The pattern I flag more than any other in reviews isn&rsquo;t
-              a bad setup or a blown stop — it&rsquo;s a trader who was
+              a bad setup or a blown stop. It&rsquo;s a trader who was
               right, closed the trade anyway, and called it &ldquo;taking
               profit early.&rdquo; That name makes it sound like a choice.
               Most of the time it isn&rsquo;t. It&rsquo;s fear wearing a
@@ -52,7 +52,7 @@ export default function CuttingWinnersPost() {
 
             <h2>What&rsquo;s actually happening</h2>
             <p>
-              You enter a trade with a written plan — a target, a stop, a
+              You enter a trade with a written plan: a target, a stop, a
               reason. Price moves in your favor. And somewhere before it
               reaches the target, a feeling shows up that has nothing to do
               with the chart: what if it turns around and gives this back?
@@ -76,8 +76,8 @@ export default function CuttingWinnersPost() {
               is what it does to your numbers over time. If your system
               needs a 1:2 reward-to-risk to be profitable and you&rsquo;re
               consistently taking 1:0.8 because you exit early, you can be
-              right on direction most of the week and still lose money —
-              which is exactly the pattern I see traders bring into reviews
+              right on direction most of the week and still lose money.
+              That&rsquo;s exactly the pattern I see traders bring into reviews
               confused about. They weren&rsquo;t wrong about the market.
               They were wrong about following their own exit.
             </p>
@@ -86,7 +86,7 @@ export default function CuttingWinnersPost() {
             <p>
               Telling yourself to &ldquo;just hold&rdquo; next time
               doesn&rsquo;t work, because the urge to exit early shows up
-              exactly when your judgment is least trustworthy — mid-trade,
+              exactly when your judgment is least trustworthy, mid-trade,
               with money moving. The fix has to happen before you&rsquo;re
               in that state:
             </p>
@@ -97,7 +97,7 @@ export default function CuttingWinnersPost() {
               </li>
               <li>
                 Decide in advance what would actually justify closing
-                early — a real structural change, not a feeling
+                early: a real structural change, not a feeling
               </li>
               <li>
                 Journal every early exit the same way you&rsquo;d journal a
@@ -107,7 +107,7 @@ export default function CuttingWinnersPost() {
             <p>
               This is most of what a second set of eyes is actually for.
               It&rsquo;s hard to catch yourself rationalizing an early exit
-              in real time — it&rsquo;s much easier for someone reviewing
+              in real time. It&rsquo;s much easier for someone reviewing
               the trade after, checking it against what you wrote down
               before you entered.
             </p>

@@ -8,7 +8,7 @@ import { articleSchema } from "@/lib/articleSchema";
 const post = getPostBySlug("written-reason-before-entry")!;
 
 export const metadata: Metadata = {
-  title: `${post.title} — Bunny Trading`,
+  title: `${post.title} | Bunny Trading`,
   description: post.description,
 };
 
@@ -47,7 +47,7 @@ export default function WrittenReasonPost() {
               and it&rsquo;s the one that does the most work, because
               it&rsquo;s not really about the writing. It&rsquo;s a test.
               If you can&rsquo;t explain the trade in a sentence before you
-              take it, you don&rsquo;t have a setup yet &mdash; you have a
+              take it, you don&rsquo;t have a setup yet. You have a
               feeling you haven&rsquo;t examined closely enough to know
               that.
             </p>
@@ -55,7 +55,7 @@ export default function WrittenReasonPost() {
             <h2>Why the timing matters more than the content</h2>
             <p>
               Anyone can write a reason for a trade after it&rsquo;s already
-              working &mdash; that&rsquo;s just narrating a result and
+              working. That&rsquo;s just narrating a result and
               calling it analysis. The value is entirely in doing it
               before, while you still don&rsquo;t know if you&rsquo;re
               right. That&rsquo;s the only point in the process where the
@@ -66,8 +66,8 @@ export default function WrittenReasonPost() {
 
             <h2>What a real reason looks like</h2>
             <p>
-              A real reason names a specific level and a specific structure
-              &mdash; &ldquo;4H structure holding above 2,398 support,
+              A real reason names a specific level and a specific structure:
+              &ldquo;4H structure holding above 2,398 support,
               London liquidity sweep confirmed&rdquo; is a reason. &ldquo;It
               feels like it&rsquo;s going up&rdquo; is not, and neither is
               &ldquo;this pattern has worked before&rdquo; without saying
@@ -82,7 +82,7 @@ export default function WrittenReasonPost() {
               The real usefulness of this rule shows up in what it stops.
               Plenty of trades that feel obvious in the moment turn out to
               be nothing once you try to write the actual structural reason
-              behind them &mdash; you start typing and realize there isn&rsquo;t
+              behind them. You start typing and realize there isn&rsquo;t
               one, just a chart that&rsquo;s been moving and a fear of
               missing it. That&rsquo;s the trade this rule is built to
               catch, and it only catches it if the reason gets written
@@ -91,7 +91,7 @@ export default function WrittenReasonPost() {
             <p>
               This is also what makes review actually useful. When
               there&rsquo;s a written reason on record, a review isn&rsquo;t
-              judging the outcome &mdash; it&rsquo;s checking whether the
+              judging the outcome. It&rsquo;s checking whether the
               trade matched the reason you gave for it, which is the only
               part of a trade you actually control.
             </p>

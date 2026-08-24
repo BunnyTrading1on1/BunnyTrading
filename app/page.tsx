@@ -25,7 +25,7 @@ export default function Home() {
             </h1>
             <p className="lede">
               Structured mentorship for gold, indexes, crypto, and stock
-              traders — position sizing, discipline, and real feedback on
+              traders: position sizing, discipline, and real feedback on
               every trade, before you click buy.
             </p>
             <div className="hero-stats">
@@ -44,7 +44,7 @@ export default function Home() {
             </div>
             <p className="hero-fineprint">
               Bunny Trading&rsquo;s own risk framework, not personalized
-              advice for your account &mdash; your numbers may differ.
+              advice for your account. Your numbers may differ.
             </p>
           </div>
           <div className="ticker-card">
@@ -81,8 +81,8 @@ export default function Home() {
               <span className="eyebrow">How it works</span>
               <h2>What week one looks like.</h2>
               <p>
-                Everyone&rsquo;s week one will look different &mdash; this
-                is just an example. Your weeks get set out for you as your
+                Everyone&rsquo;s week one will look different. This is just
+                an example, and your weeks get set out for you as your
                 journey goes on and as you grow.
               </p>
             </div>
@@ -111,9 +111,9 @@ export default function Home() {
                 <span className="num">Step 03</span>
                 <h3>Get it reviewed</h3>
                 <p>
-                  Written feedback within 24 hours on Foundations &mdash;
-                  real-time on Active Trader and Elite. Checked against your
-                  rules before anything else.
+                  Written feedback within 24 hours on Foundations, real-time
+                  on Active Trader and Elite. Checked against your rules
+                  before anything else.
                 </p>
               </div>
               <div className="step">
@@ -150,12 +150,12 @@ export default function Home() {
 
           <Reveal delay={80}>
             <div className="feedback-card">
-              <span className="tag">Sample feedback — Foundations tier</span>
+              <span className="tag">Sample feedback · Foundations tier</span>
               <p>
                 &ldquo;You&rsquo;ve been right on direction three weeks
-                straight, but you&rsquo;re still not making money &mdash;
+                straight, but you&rsquo;re still not making money. That&rsquo;s
                 because you cut winners early and let losers run past your
-                own stop. That&rsquo;s not a strategy problem, it&rsquo;s a
+                own stop. It&rsquo;s not a strategy problem, it&rsquo;s a
                 discipline problem. This week: no closing a trade before it
                 hits your stop or target, no exceptions. We&rsquo;ll talk
                 about why in Friday&rsquo;s review.&rdquo;
@@ -192,14 +192,14 @@ export default function Home() {
             <div className="portal">
               <div className="portal-head">
                 <span>
-                  <span className="dot"></span>Active Trader — Week 1, Day 3
+                  <span className="dot"></span>Active Trader · Week 1, Day 3
                 </span>
                 <span className="status-pill">Reviewed</span>
               </div>
               <div className="portal-body">
                 <div className="journal-row">
                   <div className="q">Did I trade?</div>
-                  <div className="a">Yes — one long on XAU/USD, London open.</div>
+                  <div className="a">Yes, one long on XAU/USD, London open.</div>
                 </div>
                 <div className="journal-row">
                   <div className="q">Reason sent first?</div>
@@ -218,9 +218,9 @@ export default function Home() {
                 <div className="journal-row">
                   <div className="q">Felt</div>
                   <div className="a">
-                    Wanted to add size once it moved in my favor &mdash;
-                    partly to prove I could&rsquo;ve gone bigger. Sent 0.02
-                    lots like the plan said, and nothing more.
+                    Wanted to add size once it moved in my favor, partly to
+                    prove I could&rsquo;ve gone bigger. Sent 0.02 lots like
+                    the plan said, and nothing more.
                   </div>
                 </div>
                 <div className="journal-row">
@@ -229,8 +229,8 @@ export default function Home() {
                     <i>
                       &ldquo;That urge to add size once you&rsquo;re already
                       right is the same instinct that blows accounts up
-                      eventually &mdash; you just haven&rsquo;t paid for it
-                      yet. Catching it and sticking to the number is worth
+                      eventually. You just haven&rsquo;t paid for it yet.
+                      Catching it and sticking to the number is worth
                       more than the extra pips would&rsquo;ve been. Write
                       that down for Friday.&rdquo;
                     </i>

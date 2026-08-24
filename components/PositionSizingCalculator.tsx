@@ -104,7 +104,7 @@ export default function PositionSizingCalculator() {
         </div>
         <div className={`risk-note${overRule ? " is-over" : ""}`}>
           {overRule
-            ? `Above the 3% rule — dial it back`
+            ? `Above the 3% rule, dial it back`
             : `Within the 3% max-risk rule`}
         </div>
         <div className="breakdown">
@@ -115,7 +115,7 @@ export default function PositionSizingCalculator() {
         </div>
         <div className="calc-fineprint">
           The 3% line reflects Bunny Trading&rsquo;s own risk framework, not
-          personalized advice — every trader&rsquo;s numbers should reflect
+          personalized advice. Every trader&rsquo;s numbers should reflect
           their own plan and risk tolerance.
         </div>
       </div>

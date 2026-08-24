@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
   if (isRateLimited(ip)) {
     return NextResponse.json(
-      { error: "Too many messages sent — try again in a few minutes." },
+      { error: "Too many messages sent, try again in a few minutes." },
       { status: 429 },
     );
   }
@@ -105,7 +105,7 @@ export async function POST(req: NextRequest) {
       "Contact form is missing RESEND_API_KEY or CONTACT_EMAIL env vars.",
     );
     return NextResponse.json(
-      { error: "Contact form isn't set up yet — please try again later." },
+      { error: "Contact form isn't set up yet, please try again later." },
       { status: 500 },
     );
   }
@@ -118,7 +118,7 @@ export async function POST(req: NextRequest) {
       from,
       to,
       replyTo: email.trim(),
-      subject: `New DM from ${name.trim()}${level ? ` — ${level}` : ""}`,
+      subject: `New DM from ${name.trim()}${level ? ` (${level})` : ""}`,
       text: `From: ${name.trim()} <${email.trim()}>\nLocation: ${location?.trim() || "Not specified"}\nInterested in: ${level || "Not specified"}${formatUtm(utm)}\n\n${message.trim()}`,
     });
 
@@ -144,8 +144,8 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from,
       to: email.trim(),
-      subject: "Got your message — Bunny Trading",
-      text: `Hey ${name.trim()},\n\nThanks for reaching out — I got your message and will reply within 24 hours.\n\n— Bunny Trading`,
+      subject: "Got your message | Bunny Trading",
+      text: `Hey ${name.trim()},\n\nThanks for reaching out, I got your message and will reply within 24 hours.\n\nBunny Trading`,
     });
   } catch (err) {
     console.error("Confirmation email failed (non-fatal)", err);

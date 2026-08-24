@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Bunny Trading",
+  title: "Privacy Policy | Bunny Trading",
   description:
-    "What information this site collects, why, and who it's shared with — in plain language.",
+    "What information this site collects, why, and who it's shared with, in plain language.",
 };
 
 export default function PrivacyPolicy() {
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
             This page explains what information Bunny Trading collects when
             you use this site, why, and who it&rsquo;s shared with. It&rsquo;s
             written in plain language rather than
-            formal legal text &mdash; if you need a version reviewed for a
+            formal legal text. If you need a version reviewed for a
             specific jurisdiction&rsquo;s compliance requirements, that
             hasn&rsquo;t been done here.
           </p>
@@ -33,12 +33,12 @@ export default function PrivacyPolicy() {
             your name, email address, and message, plus whatever you
             optionally provide for location and which tier you&rsquo;re
             interested in. This is sent by email so a reply can be sent to
-            you &mdash; it is not added to a mailing list or used for
+            you. It is not added to a mailing list or used for
             anything besides responding to your message.
           </p>
           <p>
             <b>Analytics.</b> This site uses Google Analytics (GA4) and
-            Vercel Analytics to understand traffic &mdash; which pages get
+            Vercel Analytics to understand traffic: which pages get
             visited, roughly where from (country/city level, not precise
             location), and which device or browser was used. Google
             Analytics sets cookies to do this; Vercel Analytics does not.
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
           <p>
             <b>What we don&rsquo;t collect.</b> There are no user accounts
             or passwords on this site, and no payment or card details are
-            ever entered here &mdash; mentorship payment is arranged
+            ever entered here. Mentorship payment is arranged
             directly once you&rsquo;ve messaged in.
           </p>
 
@@ -77,8 +77,8 @@ export default function PrivacyPolicy() {
             <a href="/contact" style={{ color: "var(--gold)" }}>
               contact form
             </a>{" "}
-            or WhatsApp and it&rsquo;ll be handled directly &mdash;
-            there&rsquo;s no automated system to route the request through.
+            or WhatsApp and it&rsquo;ll be handled directly. There&rsquo;s
+            no automated system to route the request through.
           </p>
         </div>
       </div>

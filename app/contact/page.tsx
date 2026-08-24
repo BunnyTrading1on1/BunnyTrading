@@ -4,9 +4,9 @@ import ContactForm from "@/components/ContactForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Contact — Gold Trading Mentorship | Bunny Trading",
+  title: "Contact | Gold Trading Mentorship | Bunny Trading",
   description:
-    "DM to start — send a message and get a reply within 24 hours.",
+    "DM to start. Send a message and get a reply within 24 hours.",
 };
 
 export default function ContactPage() {
@@ -20,7 +20,7 @@ export default function ContactPage() {
             <h1>Send a message.</h1>
             <p>
               Tell me a bit about where you&rsquo;re at and what you&rsquo;re
-              looking for — I reply within 24 hours.
+              looking for. I reply within 24 hours.
             </p>
           </div>
           <ul className="contact-points">

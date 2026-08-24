@@ -6,10 +6,10 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { serviceSchema } from "@/lib/serviceSchema";
 
 const description =
-  "Active Trader: weekly 1-on-1 calls, real-time WhatsApp feedback, and live trade corrections — $399/mo.";
+  "Active Trader: weekly 1-on-1 calls, real-time WhatsApp feedback, and live trade corrections. $399/mo.";
 
 export const metadata: Metadata = {
-  title: "Active Trader — Gold Trading Mentorship | Bunny Trading",
+  title: "Active Trader | Gold Trading Mentorship | Bunny Trading",
   description,
 };
 
@@ -44,7 +44,7 @@ export default function ActiveTraderPage() {
             </div>
             <p>
               Active Trader is Foundations with a mentor who&rsquo;s
-              actually watching. Everything from Foundations stays &mdash;
+              actually watching. Everything from Foundations stays:
               you still do the homework, you still get written feedback.
               But now you get live coaching on the one thing that separates
               learning traders from funded traders: real-time discipline
@@ -59,26 +59,26 @@ export default function ActiveTraderPage() {
             <h2>Everything in Foundations, plus live coaching.</h2>
           </div>
           <ul className="detail-list">
-            <li>Everything in Foundations &mdash; all homework, all written reviews, all education.</li>
+            <li>Everything in Foundations: all homework, all written reviews, all education.</li>
             <li>
-              <b>Weekly 1-on-1 call</b> &mdash; 60 minutes on your charts,
+              <b>Weekly 1-on-1 call:</b> 60 minutes on your charts,
               every week.
             </li>
             <li>
-              <b>Real-time WhatsApp feedback</b> &mdash; submit your trade
+              <b>Real-time WhatsApp feedback:</b> submit your trade
               reason before entry, get a same-day response during market
               hours.
             </li>
             <li>
-              <b>Live trade feedback</b> &mdash; corrections while they
+              <b>Live trade feedback:</b> corrections while they
               actually matter, not postmortems.
             </li>
             <li>
-              <b>Monthly accountability reviews</b> &mdash; performance
+              <b>Monthly accountability reviews:</b> performance
               analysis, what&rsquo;s working, what needs to shift.
             </li>
             <li>
-              <b>Prop firm preparation</b> &mdash; how to pass evaluations,
+              <b>Prop firm preparation:</b> how to pass evaluations,
               manage funded accounts, scale safely.
             </li>
           </ul>
@@ -108,7 +108,7 @@ export default function ActiveTraderPage() {
           </div>
           <ul className="detail-list">
             <li>
-              <b>Months 1&ndash;2:</b> Faster progress. Real discipline,
+              <b>Months 1 to 2:</b> Faster progress. Real discipline,
               because someone holds you to it.
             </li>
             <li>
@@ -133,7 +133,7 @@ export default function ActiveTraderPage() {
             <li>Anyone with a live or demo account who wants feedback while trades are happening.</li>
             <li>Traders preparing for prop firm evaluations or scaling funded accounts.</li>
             <li>People in different timezones who need async feedback plus one live call a week.</li>
-            <li>Most mentees &mdash; this is the tier that delivers the biggest shift in discipline and results.</li>
+            <li>Most mentees: this is the tier that delivers the biggest shift in discipline and results.</li>
           </ul>
         </Reveal>
 

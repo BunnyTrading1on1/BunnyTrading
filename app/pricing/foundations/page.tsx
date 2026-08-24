@@ -6,10 +6,10 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { serviceSchema } from "@/lib/serviceSchema";
 
 const description =
-  "Foundations: weekly homework, written trade reviews, and risk management education built around your own account — $199/mo.";
+  "Foundations: weekly homework, written trade reviews, and risk management education built around your own account. $199/mo.";
 
 export const metadata: Metadata = {
-  title: "Foundations — Gold Trading Mentorship | Bunny Trading",
+  title: "Foundations | Gold Trading Mentorship | Bunny Trading",
   description,
 };
 
@@ -45,7 +45,7 @@ export default function FoundationsPage() {
             <p>
               The Foundation Tier is where discipline meets structure. You
               get weekly homework that forces you to think like a trader
-              before you risk real money &mdash; reading structure across
+              before you risk real money: reading structure across
               timeframes, sizing positions correctly, managing risk before
               emotion takes over, and journaling the trades that matter.
             </p>
@@ -59,24 +59,24 @@ export default function FoundationsPage() {
           </div>
           <ul className="detail-list">
             <li>
-              <b>Weekly homework assignments</b> &mdash; real work every
+              <b>Weekly homework assignments:</b> real work every
               single week that reinforces learning.
             </li>
             <li>
-              <b>Written trade reviews</b> &mdash; send me your setups, I
+              <b>Written trade reviews:</b> send me your setups, I
               break down what you&rsquo;re seeing and why it matters.
             </li>
             <li>
-              <b>Risk management education</b> &mdash; position sizing
+              <b>Risk management education:</b> position sizing
               formulas, stop placement, R:R optimization, lot sizing
               strategies tailored to your account.
             </li>
             <li>
-              <b>Psychology and discipline training</b> &mdash; the part
+              <b>Psychology and discipline training:</b> the part
               most traders skip, and most regret skipping.
             </li>
             <li>
-              <b>Your personal trading plan</b> &mdash; built around your
+              <b>Your personal trading plan:</b> built around your
               actual schedule and life, not a generic template.
             </li>
             <li>
@@ -95,7 +95,7 @@ export default function FoundationsPage() {
                 wins. You learn to spot setups on your own, size correctly
                 for your account, and develop the discipline that
                 separates traders who last from traders who blow up. No
-                shortcuts, no calls, no real-time hand-holding &mdash; this
+                shortcuts, no calls, no real-time hand-holding. This
                 level is about learning to think independently.
               </p>
             </div>
@@ -109,11 +109,11 @@ export default function FoundationsPage() {
           </div>
           <ul className="detail-list">
             <li>
-              <b>Months 1&ndash;2:</b> Build the foundation. Learn the
+              <b>Months 1 to 2:</b> Build the foundation. Learn the
               setups. Get comfortable reading structure.
             </li>
             <li>
-              <b>Month 3:</b> The habits start feeling automatic &mdash;
+              <b>Month 3:</b> The habits start feeling automatic:
               sizing, journaling, reading structure without
               second-guessing yourself.
             </li>

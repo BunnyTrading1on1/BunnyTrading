@@ -8,7 +8,7 @@ import { articleSchema } from "@/lib/articleSchema";
 const post = getPostBySlug("revenge-trading-after-a-loss")!;
 
 export const metadata: Metadata = {
-  title: `${post.title} — Bunny Trading`,
+  title: `${post.title} | Bunny Trading`,
   description: post.description,
 };
 
@@ -45,7 +45,7 @@ export default function RevengeTradingPost() {
               Revenge trading doesn&rsquo;t announce itself. Nobody sits
               down after a loss and thinks &ldquo;I&rsquo;m about to make a
               worse decision to get even.&rdquo; It shows up wearing
-              conviction&rsquo;s clothes &mdash; the next setup just happens
+              conviction&rsquo;s clothes: the next setup just happens
               to look unusually good, right after the account needed it to.
               That timing is the whole tell, and it&rsquo;s the thing
               that&rsquo;s hardest to see from inside your own head in the
@@ -56,7 +56,7 @@ export default function RevengeTradingPost() {
             <p>
               The pattern I catch most in reviews: two losses early in the
               session, then a third entry that doesn&rsquo;t quite match
-              the trader&rsquo;s usual criteria &mdash; sized a little
+              the trader&rsquo;s usual criteria: sized a little
               bigger, entered a little faster, with a reason that sounds
               right but was clearly written to justify a trade that had
               already been decided on emotionally. The setup gets described
@@ -67,7 +67,7 @@ export default function RevengeTradingPost() {
             <h2>Why it&rsquo;s so easy to miss in yourself</h2>
             <p>
               A revenge trade and a genuinely good trade can look identical
-              from the outside &mdash; same chart, same indicators, same
+              from the outside: same chart, same indicators, same
               vocabulary in the reason you write. The difference isn&rsquo;t
               in the setup. It&rsquo;s in why you&rsquo;re taking it right
               now, and that&rsquo;s exactly the part your own judgment is
@@ -85,14 +85,14 @@ export default function RevengeTradingPost() {
               the account&rsquo;s. If the real answer is that you&rsquo;re
               worried the window will close, notice that the worry is doing
               the deciding, not the structure. A setup that&rsquo;s only
-              urgent because you just lost money isn&rsquo;t urgent &mdash;
-              it&rsquo;s a signal to step back, not size up.
+              urgent because you just lost money isn&rsquo;t urgent.
+              It&rsquo;s a signal to step back, not size up.
             </p>
             <p>
               This is the single biggest reason a second set of eyes matters
               more after a losing trade than after a winning one. Someone
               reviewing your setup in real time, before entry, isn&rsquo;t
-              carrying the same urgency you are &mdash; which means
+              carrying the same urgency you are, which means
               they&rsquo;re the one person positioned to actually see the
               difference between your setup and your feelings about your
               account.
@@ -110,7 +110,7 @@ export default function RevengeTradingPost() {
             {
               href: "/blog/stop-cutting-winners-early",
               label: "Related",
-              desc: "The other side of the same instinct — cutting winners early.",
+              desc: "The other side of the same instinct: cutting winners early.",
             },
             {
               href: "/blog",

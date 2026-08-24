@@ -11,7 +11,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "xauusd-position-sizing-guide",
     title: "XAUUSD Position Sizing: The Formula Behind Every Trade Review",
     description:
-      "The exact math I check every gold trade against before I look at anything else — account size, risk percentage, stop distance, and why the order you calculate them in matters.",
+      "The exact math I check every gold trade against before I look at anything else: account size, risk percentage, stop distance, and why the order you calculate them in matters.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
   },
@@ -19,7 +19,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "stop-cutting-winners-early",
     title: "Why Cutting Winners Early Costs You More Than Bad Losses",
     description:
-      "Cutting winners early feels like discipline. It isn't — it's the same fear that blows accounts up eventually, just wearing a more comfortable name.",
+      "Cutting winners early feels like discipline. It isn't. It's the same fear that blows accounts up eventually, just wearing a more comfortable name.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
   },
@@ -35,7 +35,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "reward-to-risk-ratio-minimum",
     title: "Why 1:2 Reward-to-Risk Is a Minimum, Not a Suggestion",
     description:
-      "A 1:2 minimum isn't arbitrary — it's the line where being right less than half the time can still be profitable. Here's the math behind the rule.",
+      "A 1:2 minimum isn't arbitrary. It's the line where being right less than half the time can still be profitable. Here's the math behind the rule.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
   },
@@ -43,7 +43,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "written-reason-before-entry",
     title: "The Written Reason Rule: Why I Won't Review a Trade Without One",
     description:
-      "If you can't explain a trade in one sentence before you take it, you don't have a setup — you have a hunch dressed up as one.",
+      "If you can't explain a trade in one sentence before you take it, you don't have a setup. You have a hunch dressed up as one.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
   },
@@ -51,7 +51,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "revenge-trading-after-a-loss",
     title: "Revenge Trading: The Pattern I Catch Most in Reviews",
     description:
-      "Revenge trades don't look reckless from the inside — they look like conviction. Here's how to tell the difference before you click buy.",
+      "Revenge trades don't look reckless from the inside. They look like conviction. Here's how to tell the difference before you click buy.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
   },

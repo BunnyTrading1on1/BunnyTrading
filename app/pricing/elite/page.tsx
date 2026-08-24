@@ -6,10 +6,10 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { serviceSchema } from "@/lib/serviceSchema";
 
 const description =
-  "Elite: unlimited calls, live session access, and priority replies — the fastest feedback loop available, $999/mo.";
+  "Elite: unlimited calls, live session access, and priority replies. The fastest feedback loop available, $999/mo.";
 
 export const metadata: Metadata = {
-  title: "Elite — Gold Trading Mentorship | Bunny Trading",
+  title: "Elite | Gold Trading Mentorship | Bunny Trading",
   description,
 };
 
@@ -44,12 +44,12 @@ export default function ElitePage() {
             </div>
             <p>
               Elite is partnership. You get everything in Active Trader,
-              and then unlimited access &mdash; no call cap, no
+              and then unlimited access: no call cap, no
               &ldquo;I&rsquo;ll get back to you tomorrow,&rdquo; no limits
               on what you can ask for.
             </p>
             <p className="hero-fineprint" style={{ marginTop: 16 }}>
-              This tier closes once it&rsquo;s full &mdash; not artificial
+              This tier closes once it&rsquo;s full. Not artificial
               scarcity, unlimited access only works when there&rsquo;s
               actual capacity.
             </p>
@@ -62,28 +62,28 @@ export default function ElitePage() {
             <h2>Everything in Active Trader, and no ceiling.</h2>
           </div>
           <ul className="detail-list">
-            <li>Everything in Active Trader &mdash; all calls, all WhatsApp, all homework, all feedback.</li>
+            <li>Everything in Active Trader: all calls, all WhatsApp, all homework, all feedback.</li>
             <li>
-              <b>Unlimited calls</b> &mdash; as many as we can schedule.
+              <b>Unlimited calls:</b> as many as we can schedule.
             </li>
             <li>
-              <b>Priority access</b> &mdash; you come first, every single
+              <b>Priority access:</b> you come first, every single
               time.
             </li>
             <li>
-              <b>Live session access</b> &mdash; sit in while I trade and
+              <b>Live session access:</b> sit in while I trade and
               see the thinking in real time.
             </li>
             <li>
-              <b>Deep psychology work</b> &mdash; addressing the beliefs
+              <b>Deep psychology work:</b> addressing the beliefs
               and patterns that hold traders back.
             </li>
             <li>
-              <b>Faith and emotional support</b>, if you want it &mdash;
-              this tier includes the hard conversations too.
+              <b>Faith and emotional support</b>, if you want it.
+              This tier includes the hard conversations too.
             </li>
             <li>
-              <b>Anything on request</b> &mdash; within reason, no
+              <b>Anything on request:</b> within reason, no
               boundaries, no &ldquo;that&rsquo;s not included.&rdquo;
             </li>
           </ul>
@@ -96,11 +96,11 @@ export default function ElitePage() {
             <div className="prose">
               <p>
                 We work as actual partners, not coach and student.
-                You&rsquo;re not waiting for feedback &mdash; you&rsquo;re
+                You&rsquo;re not waiting for feedback, you&rsquo;re
                 getting it immediately. You&rsquo;re not wondering if the
-                strategy is right &mdash; you&rsquo;re learning it in real
+                strategy is right, you&rsquo;re learning it in real
                 time by watching execution. You&rsquo;re not isolated with
-                your struggles &mdash; you have someone invested in your
+                your struggles, you have someone invested in your
                 progress through the hard months, not just the good ones.
               </p>
             </div>
@@ -114,12 +114,12 @@ export default function ElitePage() {
           </div>
           <ul className="detail-list">
             <li>
-              <b>Months 1&ndash;2:</b> Rapid acceleration. We work as
+              <b>Months 1 to 2:</b> Rapid acceleration. We work as
               partners.
             </li>
             <li>
-              <b>Month 3:</b> More capacity, faster iteration on strategy
-              &mdash; because access isn&rsquo;t rationed here.
+              <b>Month 3:</b> More capacity, faster iteration on strategy,
+              because access isn&rsquo;t rationed here.
             </li>
             <li>
               <b>Ongoing:</b> Sustainable growth, long-term partnership.

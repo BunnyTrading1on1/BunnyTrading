@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Risk Disclaimer — Bunny Trading",
+  title: "Risk Disclaimer | Bunny Trading",
   description:
     "Trading gold, indexes, crypto, and stocks carries a high level of risk. Read before using this site or its tools.",
 };
@@ -33,8 +33,8 @@ export default function RiskDisclaimer() {
             this site, in the position sizing tool, in trade reviews, or in
             any conversation with a mentor constitutes financial advice, a
             recommendation to buy or sell any asset, or a guarantee of
-            future results. Past performance &mdash; yours or anyone
-            else&rsquo;s &mdash; is not indicative of future performance.
+            future results. Past performance, yours or anyone
+            else&rsquo;s, is not indicative of future performance.
           </p>
           <p>
             The position sizing calculator on this site is a convenience
