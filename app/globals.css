@@ -248,7 +248,13 @@ section.line-top {
 }
 .breadcrumbs {
   display: block;
+  position: static;
+  z-index: auto;
   margin-bottom: 24px;
+  padding: 0;
+  background: none;
+  backdrop-filter: none;
+  border-bottom: none;
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--muted);
