@@ -9,8 +9,8 @@ const MAX_RULE_RISK_PCT = 3;
 const BAR_SCALE_PCT = 15; // 100%-wide bar represents up to 15% risk
 
 export default function PositionSizingCalculator() {
-  const [account, setAccount] = useState(100);
-  const [riskPct, setRiskPct] = useState(3);
+  const [account, setAccount] = useState(1000);
+  const [riskPct, setRiskPct] = useState(1);
   const [stopPips, setStopPips] = useState(100);
 
   const safePips = stopPips || 0.0001;
