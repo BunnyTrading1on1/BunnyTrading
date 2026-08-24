@@ -564,7 +564,8 @@ section.line-top {
 .field textarea:focus,
 .form-step input:focus,
 .form-step textarea:focus {
-  outline: none;
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
   border-color: var(--gold);
 }
 .calc-result {

@@ -26,6 +26,7 @@ export default function BackToTop() {
       className={`back-to-top${visible ? " is-visible" : ""}`}
       aria-label="Back to top"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      inert={!visible}
     >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path

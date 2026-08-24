@@ -69,7 +69,7 @@ export default function Nav() {
         </button>
       </div>
 
-      <div className={`mobile-menu${open ? " is-open" : ""}`}>
+      <div className={`mobile-menu${open ? " is-open" : ""}`} inert={!open}>
         {LINKS.map((l) => (
           <Link
             key={l.href}
