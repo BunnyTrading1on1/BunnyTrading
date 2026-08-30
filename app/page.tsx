@@ -1,15 +1,14 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import HeroParticles from "@/components/HeroParticles";
-import HeroPhoto from "@/components/HeroPhoto";
 import PhotoReveal from "@/components/PhotoReveal";
 
 export default function Home() {
   return (
     <>
       <header className="hero">
-        <HeroPhoto image="/images/hero-desk.jpg" />
-        <HeroParticles />
+        <div className="hero-bg" aria-hidden="true">
+          <img src="/images/hero-equity-curve.svg" alt="" />
+        </div>
         <div className="wrap hero-grid">
           <div>
             <span className="eyebrow">One-on-one · Gold, Indexes, Crypto &amp; Stocks</span>
@@ -26,20 +25,14 @@ export default function Home() {
               traders: position sizing, discipline, and a second pair of
               eyes before you click buy.
             </p>
-            <div className="hero-stats">
-              <div>
-                <div className="num">1:2</div>
-                <div className="lbl">Min Reward:Risk</div>
-              </div>
-              <div>
-                <div className="num">0</div>
-                <div className="lbl">Sales Calls Required</div>
-              </div>
+            <div className="hero-cta-row">
+              <Link href="/contact" className="nav-cta">
+                DM to Start<span className="cta-arrow">→</span>
+              </Link>
+              <Link href="/pricing" style={{ color: "var(--gold-text)" }}>
+                See pricing<span className="cta-arrow">→</span>
+              </Link>
             </div>
-            <p className="hero-fineprint">
-              Bunny Trading&rsquo;s own risk framework, not personalized
-              advice for your account. Your numbers may differ.
-            </p>
           </div>
         </div>
       </header>

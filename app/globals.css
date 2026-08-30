@@ -153,34 +153,30 @@ header.hero {
   margin: 18px 0 20px;
 }
 .hero h1 .accent {
-  color: var(--gold);
+  color: var(--gold-text);
 }
 .hero p.lede {
   font-size: 18px;
   max-width: 46ch;
   color: var(--ink-2);
 }
-.hero-stats {
+.hero-cta-row {
   display: flex;
-  gap: 36px;
+  align-items: center;
+  gap: 28px;
   margin-top: 36px;
   flex-wrap: wrap;
 }
-.hero-stats div {
-  border-left: 2px solid var(--gold);
-  padding-left: 12px;
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
-.hero-stats .num {
-  font-family: var(--font-mono);
-  font-size: 22px;
-  font-weight: 700;
-}
-.hero-stats .lbl {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  font-family: var(--font-mono);
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
 }
 .hero-fineprint {
   font-size: 12px;
@@ -1432,17 +1428,16 @@ footer .note {
 }
 .hero .eyebrow,
 .hero p.lede,
-.hero-stats {
+.hero-cta-row {
   animation: fade-up 0.75s ease-out backwards;
 }
 .hero .eyebrow {
   animation-delay: 0.05s;
-  color: var(--gold-light);
 }
 .hero p.lede {
   animation-delay: 0.28s;
 }
-.hero-stats {
+.hero-cta-row {
   animation-delay: 0.4s;
 }
 
@@ -1621,41 +1616,9 @@ footer .note {
   color: var(--cream);
 }
 
-/* Drifting gold particle field, above the photo */
-.hero-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-.hero-particles canvas {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
-}
 .hero .wrap.hero-grid {
   position: relative;
   z-index: 2;
-}
-
-/* Hero text — light-on-dark now that there's a photo behind it */
-.hero-title .word {
-  color: var(--cream);
-}
-.hero-title .word.accent {
-  color: var(--gold-light);
-}
-.hero p.lede {
-  color: rgba(243, 238, 228, 0.82);
-}
-.hero-stats .num {
-  color: var(--cream);
-}
-.hero-stats .lbl {
-  color: rgba(243, 238, 228, 0.6);
-}
-.hero .hero-fineprint {
-  color: rgba(243, 238, 228, 0.55);
 }
 
 /* Hover lifts */
@@ -1702,13 +1665,6 @@ footer .cta {
 footer .cta:hover {
   background: var(--gold-light);
 }
-.hero-stats div {
-  transition: border-color 0.25s ease;
-}
-.hero-stats div:hover {
-  border-left-color: var(--gold-light);
-}
-
 /* FAQ open animation */
 @keyframes faq-open {
   from {
