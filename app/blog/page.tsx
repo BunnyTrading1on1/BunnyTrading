@@ -28,10 +28,13 @@ export default function BlogIndex() {
         </Reveal>
 
         <Reveal stagger>
-          <div className="blog-list">
+          <div className="posts">
             {BLOG_POSTS.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="blog-list-item">
-                <span className="blog-list-date">{post.displayDate}</span>
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="post">
+                <div className="post-meta">
+                  <span className="post-tag">{post.category}</span>
+                  <span className="blog-list-date">{post.displayDate}</span>
+                </div>
                 <h2>{post.title}</h2>
                 <p>{post.description}</p>
                 <span className="blog-list-read">

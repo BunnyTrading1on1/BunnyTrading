@@ -82,13 +82,43 @@ export default function Pricing() {
         />
         <Reveal>
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Pricing" }]} />
-          <div className="section-head">
-            <span className="eyebrow">Pick your level</span>
-            <h1>What changes is my time.</h1>
-            <p>
-              Every level teaches you to read the market yourself. Month to
-              month, no lock-in.
-            </p>
+          <div className="pricing-head">
+            <div className="section-head" style={{ marginBottom: 0 }}>
+              <span className="eyebrow">Pick your level</span>
+              <h1>What changes is my time.</h1>
+              <p>
+                Every level teaches you to read the market yourself. Month to
+                month, no lock-in.
+              </p>
+            </div>
+            <ul className="reassure">
+              <li>
+                <span className="tick">✓</span>
+                <span>
+                  <b>Month to month.</b> No lock-in, no contract.
+                </span>
+              </li>
+              <li>
+                <span className="tick">✓</span>
+                <span>
+                  <b>Cancel anytime.</b> Just tell me before the next
+                  billing date.
+                </span>
+              </li>
+              <li>
+                <span className="tick">✓</span>
+                <span>
+                  <b>Switch levels anytime.</b> Up or down, whenever it
+                  suits you.
+                </span>
+              </li>
+              <li>
+                <span className="tick">✓</span>
+                <span>
+                  <b>Reply within 24 hours</b> of your first DM.
+                </span>
+              </li>
+            </ul>
           </div>
         </Reveal>
         <div className="tiers">
@@ -110,7 +140,9 @@ export default function Pricing() {
             </span>
           </Link>
           <Link href="/pricing/active-trader" className="tier featured">
-            <span className="lvl">Level 02 · Most Take This</span>
+            <span className="lvl">
+              Level 02<span className="badge">Most take this</span>
+            </span>
             <h2>Active Trader</h2>
             <div className="price">
               $399<small> / mo</small>
@@ -336,23 +368,6 @@ export default function Pricing() {
           </details>
         </div>
 
-        <Reveal>
-          <div className="section-head" style={{ marginTop: 56 }}>
-            <span className="eyebrow">Before you DM</span>
-            <h2>One more thing.</h2>
-            <p>
-              I&rsquo;m selective about who I take. I&rsquo;ve mentored
-              people who wanted someone else to make them rich while they
-              stayed comfortable. That&rsquo;s not what this is. I
-              take traders who show up for homework and are willing to be
-              wrong and fix it. If I say we&rsquo;re at capacity or
-              it&rsquo;s not the right fit, that&rsquo;s not personal.
-              I&rsquo;d rather turn down a month&rsquo;s revenue
-              than spend time with someone who isn&rsquo;t going to
-              commit.
-            </p>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

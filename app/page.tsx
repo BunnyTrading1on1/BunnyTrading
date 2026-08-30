@@ -25,17 +25,37 @@ export default function Home() {
               traders: position sizing, discipline, and a second pair of
               eyes before you click buy.
             </p>
-            <div className="hero-cta-row">
-              <Link href="/contact" className="nav-cta">
-                DM to Start<span className="cta-arrow">→</span>
-              </Link>
-              <Link href="/pricing" style={{ color: "var(--gold-text)" }}>
-                See pricing<span className="cta-arrow">→</span>
-              </Link>
-            </div>
           </div>
         </div>
       </header>
+
+      <section className="who line-top">
+        <div className="wrap split-grid">
+          <Reveal>
+            <PhotoReveal
+              src="/images/bunny-portrait.jpg"
+              alt="Bunny, founder of Bunny Trading"
+              aspect="3 / 4"
+              focal="center 20%"
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="section-head" style={{ marginBottom: 0 }}>
+              <span className="eyebrow">Who you&rsquo;re actually working with</span>
+              <h2>One mentor. Not a signal group.</h2>
+              <p>
+                I&rsquo;m Bunny, proudly South African, and I mentor a small
+                number of traders one on one. Every review comes from me,
+                not a team, not a bot, not a copy-paste template.
+                That&rsquo;s also why I cap how many students I take.
+              </p>
+              <p>
+                <Link href="/about">More about how I work →</Link>
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       <section id="how-it-works" className="line-top">
         <div className="wrap">
@@ -102,30 +122,69 @@ export default function Home() {
               <span className="eyebrow">Pick your level</span>
               <h2>What changes is my time.</h2>
               <p>
-                Three levels of mentorship, from written trade reviews to
-                unlimited live calls, all with student portal access:
-                education modules, live markets, and your own trading journal.{" "}
-                <Link href="/pricing" style={{ color: "var(--gold-text)" }}>
-                  See full pricing →
-                </Link>
+                Three levels, from written trade reviews to unlimited live
+                calls. Every level includes student portal access. Month
+                to month, no lock-in.
               </p>
             </div>
           </Reveal>
 
-          <Reveal delay={80}>
-            <div className="feedback-card">
-              <span className="tag">Real feedback · Foundations tier</span>
-              <p>
-                &ldquo;You&rsquo;ve been right on direction three weeks
-                straight, but you&rsquo;re still not making money. That&rsquo;s
-                because you cut winners early and let losers run past your
-                own stop. It&rsquo;s not a strategy problem, it&rsquo;s a
-                discipline problem. This week: no closing a trade before it
-                hits your stop or target, no exceptions. We&rsquo;ll talk
-                about why in Friday&rsquo;s review.&rdquo;
-              </p>
+          <Reveal stagger>
+            <div className="tiers">
+              <Link href="/pricing/foundations" className="tier">
+                <span className="lvl">Level 01</span>
+                <h2>Foundations</h2>
+                <div className="price">
+                  $199<small> / mo</small>
+                </div>
+                <ul>
+                  <li>Written trade reviews</li>
+                  <li>Weekly homework</li>
+                  <li>Replies within 24h</li>
+                </ul>
+                <span className="tier-btn">
+                  Learn more<span className="cta-arrow">→</span>
+                </span>
+              </Link>
+              <Link href="/pricing/active-trader" className="tier featured">
+                <span className="lvl">
+                  Level 02<span className="badge">Most take this</span>
+                </span>
+                <h2>Active Trader</h2>
+                <div className="price">
+                  $399<small> / mo</small>
+                </div>
+                <ul>
+                  <li>Weekly 60-min 1-on-1 call</li>
+                  <li>Real-time WhatsApp feedback</li>
+                  <li>Prop firm prep</li>
+                </ul>
+                <span className="tier-btn">
+                  Learn more<span className="cta-arrow">→</span>
+                </span>
+              </Link>
+              <Link href="/pricing/elite" className="tier">
+                <span className="lvl">Level 03</span>
+                <h2>Elite</h2>
+                <div className="price">
+                  $999<small> / mo</small>
+                </div>
+                <ul>
+                  <li>Sit in on live sessions</li>
+                  <li>Unlimited calls</li>
+                  <li>Priority, instant replies</li>
+                </ul>
+                <span className="tier-btn">
+                  Learn more<span className="cta-arrow">→</span>
+                </span>
+              </Link>
             </div>
           </Reveal>
+          <p style={{ marginTop: 28 }}>
+            <Link href="/pricing" style={{ color: "var(--gold-text)" }}>
+              See full pricing &amp; FAQ →
+            </Link>
+          </p>
         </div>
       </section>
 

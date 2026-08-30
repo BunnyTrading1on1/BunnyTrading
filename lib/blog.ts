@@ -4,6 +4,7 @@ export interface BlogPost {
   description: string;
   date: string; // ISO 8601
   displayDate: string;
+  category: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -14,6 +15,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Six honest questions before you start trading today, not once you're already staring at a setup. Sleep, mood, market conditions, and whether you're actually willing to walk away with zero trades.",
     date: "2026-08-30",
     displayDate: "August 30, 2026",
+    category: "Psychology",
   },
   {
     slug: "xauusd-position-sizing-guide",
@@ -22,6 +24,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "The formula behind XAUUSD position sizing: account size, risk percentage, stop distance, and why the order you calculate them in matters.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
+    category: "Position Sizing",
   },
   {
     slug: "stop-cutting-winners-early",
@@ -30,6 +33,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cutting winners early feels like discipline. It isn't. It's the same fear that blows accounts up eventually, just wearing a more comfortable name.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
+    category: "Psychology",
   },
   {
     slug: "demo-vs-live-trading",
@@ -38,6 +42,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Demo money doesn't teach real emotional discipline. Here's how to know when you're actually ready to trade live, and what changes the day you do.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
+    category: "Getting Started",
   },
   {
     slug: "reward-to-risk-ratio-minimum",
@@ -46,6 +51,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "A 1:2 minimum isn't arbitrary. It's the line where being right less than half the time can still be profitable. Here's the math behind the rule.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
+    category: "Risk Management",
   },
   {
     slug: "written-reason-before-entry",
@@ -54,6 +60,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "If you can't explain a trade in one sentence before you take it, you don't have a setup. You have a hunch dressed up as one.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
+    category: "Discipline",
   },
   {
     slug: "revenge-trading-after-a-loss",
@@ -62,6 +69,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Revenge trades don't look reckless from the inside. They look like conviction. Here's how to tell the difference before you click buy.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
+    category: "Psychology",
   },
 ];
 

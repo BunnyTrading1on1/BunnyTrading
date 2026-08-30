@@ -48,9 +48,9 @@ export default function PositionSizingCalculator() {
     .replace(/\.$/, ".00");
 
   return (
-    <div className="calc-panel">
-      <div className="calc-title">XAUUSD</div>
-      <div>
+    <div className="calc">
+      <div className="calc-in">
+        <div className="calc-title">XAUUSD</div>
         <div className="field">
           <label htmlFor="acct">Account Size ($)</label>
           <input
@@ -72,7 +72,7 @@ export default function PositionSizingCalculator() {
             onChange={(e) => setRiskPct(parseFloat(e.target.value) || 0)}
           />
         </div>
-        <div className="field">
+        <div className="field" style={{ marginBottom: 0 }}>
           <label htmlFor="stop">Stop Distance (pips)</label>
           <input
             type="number"
@@ -84,7 +84,7 @@ export default function PositionSizingCalculator() {
           />
         </div>
       </div>
-      <div className="calc-result">
+      <div className="calc-out">
         <div className="lbl">Recommended Lot Size</div>
         <div className="val">{lotDisplay}</div>
         <div className="breakdown">

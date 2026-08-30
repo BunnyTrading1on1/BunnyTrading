@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import HeroPhoto from "@/components/HeroPhoto";
 import PhotoReveal from "@/components/PhotoReveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -14,9 +13,8 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <header className="hero hero-compact">
-        <HeroPhoto image="/images/mentor-silhouette.jpg" focal="center 30%" />
-        <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
+      <header className="hero hero-compact hero-flat">
+        <div className="wrap">
           <Reveal>
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
             <div className="section-head">
@@ -97,25 +95,27 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal stagger>
-            <ul className="rules-list">
-              <li>
-                <span className="pt-num">01</span>
-                Risk no more than 3% per trade
-              </li>
-              <li>
-                <span className="pt-num">02</span>
-                Size the position to the stop, never the other way
-                around
-              </li>
-              <li>
-                <span className="pt-num">03</span>
-                Require at least 1:2 reward to risk
-              </li>
-              <li>
-                <span className="pt-num">04</span>
-                Write the reason down before entry, not after
-              </li>
-            </ul>
+            <div className="rule-grid">
+              <div className="rule">
+                <span className="num">01</span>
+                <span>Risk no more than 3% per trade</span>
+              </div>
+              <div className="rule">
+                <span className="num">02</span>
+                <span>
+                  Size the position to the stop, never the other way
+                  around
+                </span>
+              </div>
+              <div className="rule">
+                <span className="num">03</span>
+                <span>Require at least 1:2 reward to risk</span>
+              </div>
+              <div className="rule">
+                <span className="num">04</span>
+                <span>Write the reason down before entry, not after</span>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -142,6 +142,31 @@ export default function About() {
               alt="A quiet home trading office at night, where every submission gets reviewed personally"
               focal="center 40%"
             />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="selective">
+        <div className="wrap">
+          <Reveal>
+            <div className="section-head" style={{ marginBottom: 0 }}>
+              <span className="eyebrow">Before you DM</span>
+              <h2>I&rsquo;m selective about who I take.</h2>
+              <p>
+                I&rsquo;ve mentored people who wanted someone else to make
+                them rich while they stayed comfortable. That&rsquo;s not
+                what this is. I take traders who show up for homework and
+                are willing to be wrong and fix it.
+              </p>
+              <div className="sel-box">
+                <p>
+                  If I say we&rsquo;re at capacity or it&rsquo;s not the
+                  right fit, that&rsquo;s not personal. I&rsquo;d rather
+                  turn down a month&rsquo;s revenue than spend time with
+                  someone who isn&rsquo;t going to commit.
+                </p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>

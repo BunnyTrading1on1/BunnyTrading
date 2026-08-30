@@ -26,11 +26,25 @@ export default function PositionSizing() {
           </p>
         </div>
         <PositionSizingCalculator />
-        <p style={{ marginTop: 32, fontFamily: "var(--font-mono)", fontSize: 13 }}>
-          <Link href="/blog/xauusd-position-sizing-guide" style={{ color: "var(--gold-text)" }}>
-            Read the full breakdown of this formula →
-          </Link>
-        </p>
+
+        <div className="after-calc">
+          <div>
+            <h2>Got your number. Now what?</h2>
+            <p>
+              The math is the easy part. The hard part is following it on
+              a day you&rsquo;ve already lost twice. That&rsquo;s what the
+              mentorship is for.
+            </p>
+          </div>
+          <div className="after-calc-actions">
+            <Link href="/blog/xauusd-position-sizing-guide" className="tier-btn">
+              Read the breakdown
+            </Link>
+            <Link href="/pricing" className="nav-cta">
+              See pricing<span className="cta-arrow">→</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
