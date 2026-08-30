@@ -171,9 +171,7 @@ export default function About() {
         </div>
       </section>
 
-      <div className="gold-divider" aria-hidden="true" />
-
-      <section className="line-top">
+      <section>
         <div className="wrap">
           <Reveal>
             <div className="section-head">

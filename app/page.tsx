@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PhotoReveal from "@/components/PhotoReveal";
+import { REVIEWS } from "@/lib/reviews";
 
 export default function Home() {
   return (
@@ -113,7 +114,39 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="gold-divider" aria-hidden="true" />
+      <section>
+        <div className="wrap">
+          <Reveal>
+            <div className="section-head">
+              <span className="eyebrow">In their own words</span>
+              <h2>What students actually say.</h2>
+              <p>
+                Illustrative examples of the kind of feedback students give
+                across all three levels.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal stagger>
+            <div className="rev-grid">
+              {REVIEWS.slice(0, 3).map((r, i) => (
+                <div className="rev" key={i}>
+                  <p>&ldquo;{r.quote}&rdquo;</p>
+                  <div className="rev-footer">
+                    <span className="mono">{r.tier}</span>
+                    <span>{r.duration}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+          <p style={{ marginTop: 40, textAlign: "center" }}>
+            Want more?{" "}
+            <Link href="/reviews" style={{ color: "var(--gold-text)" }}>
+              Read every review →
+            </Link>
+          </p>
+        </div>
+      </section>
 
       <section id="levels" className="line-top">
         <div className="wrap">

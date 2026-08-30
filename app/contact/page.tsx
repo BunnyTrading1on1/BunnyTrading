@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import ContactForm from "@/components/ContactForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import SimpleContactForm from "@/components/SimpleContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Gold Trading Mentorship | Bunny Trading",
@@ -37,26 +36,30 @@ export default function ContactPage() {
               Month to month, cancel anytime
             </li>
           </ul>
-          <div className="wa-card">
-            <span className="mono">Fastest way</span>
-            <h2>WhatsApp me directly</h2>
-            <p>
-              Everything happens on WhatsApp anyway, reviews, feedback,
-              calls. Might as well start there. One message, no form.
-            </p>
-            <a
-              href="https://wa.me/27787514006?text=Hi%2C%20I'm%20interested%20in%20Bunny%20Trading%20mentorship."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="wa-card-btn"
-            >
-              Open WhatsApp<span className="cta-arrow">→</span>
-            </a>
+
+          <div className="alt-form">
+            <h2>Prefer email?</h2>
+            <p>Same inbox, same 24-hour reply. Three fields, that&rsquo;s it.</p>
+            <SimpleContactForm />
           </div>
         </div>
-        <Suspense fallback={null}>
-          <ContactForm />
-        </Suspense>
+
+        <div className="wa-card wa-card-primary">
+          <span className="mono">Fastest way</span>
+          <h2>WhatsApp me directly</h2>
+          <p>
+            Everything happens on WhatsApp anyway, reviews, feedback,
+            calls. Might as well start there. One message, no form.
+          </p>
+          <a
+            href="https://wa.me/27787514006?text=Hi%2C%20I'm%20interested%20in%20Bunny%20Trading%20mentorship."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="wa-card-btn"
+          >
+            Open WhatsApp<span className="cta-arrow">→</span>
+          </a>
+        </div>
       </div>
     </section>
   );
