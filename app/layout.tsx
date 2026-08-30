@@ -10,6 +10,7 @@ import BackToTop from "@/components/BackToTop";
 import ScrollProgress from "@/components/ScrollProgress";
 import CookieNotice from "@/components/CookieNotice";
 import UtmCapture from "@/components/UtmCapture";
+import MarketingChrome from "@/components/MarketingChrome";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const organizationJsonLd = {
@@ -87,14 +88,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>
-        <ScrollProgress />
-        <UtmCapture />
-        <Nav />
+        <MarketingChrome>
+          <ScrollProgress />
+          <UtmCapture />
+          <Nav />
+        </MarketingChrome>
         <main id="main-content">{children}</main>
-        <Footer />
-        <WhatsAppButton />
-        <BackToTop />
-        <CookieNotice />
+        <MarketingChrome>
+          <Footer />
+          <WhatsAppButton />
+          <BackToTop />
+          <CookieNotice />
+        </MarketingChrome>
         <Analytics />
       </body>
     </html>

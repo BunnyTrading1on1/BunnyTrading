@@ -47,6 +47,9 @@ export default function Nav() {
               {l.label}
             </Link>
           ))}
+          <Link href="/portal" className={pathname?.startsWith("/portal") ? "active" : undefined}>
+            Student Login
+          </Link>
         </div>
 
         <Magnetic strength={0.25}>
@@ -79,6 +82,9 @@ export default function Nav() {
             {l.label}
           </Link>
         ))}
+        <Link href="/portal" className={pathname?.startsWith("/portal") ? "active" : undefined}>
+          Student Login
+        </Link>
         <Link href="/contact" className="mobile-cta">
           DM to Start
         </Link>

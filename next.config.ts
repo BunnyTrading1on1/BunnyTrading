@@ -12,13 +12,26 @@ const gaConnectSrc = gaEnabled
   ? " https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com"
   : "";
 
+// Student portal (Supabase auth + database, live markets, TradingView charts) —
+// only widen the CSP when the portal is actually configured.
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const portalConnectSrc = supabaseUrl
+  ? ` ${supabaseUrl} https://api.coingecko.com https://api.gold-api.com https://r.jina.ai`
+  : "";
+const portalScriptSrc = supabaseUrl ? " https://s3.tradingview.com" : "";
+// CSP doesn't allow mixing 'none' with real sources, so pick one or the other.
+const frameSrcValue = supabaseUrl
+  ? "https://s.tradingview.com https://www.tradingview.com https://*.tradingview-widget.com"
+  : "'none'";
+
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com${gaScriptSrc}${isDev ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com${gaScriptSrc}${portalScriptSrc}${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",
-  `connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com${gaConnectSrc}`,
+  `connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com${gaConnectSrc}${portalConnectSrc}`,
+  `frame-src ${frameSrcValue}`,
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
