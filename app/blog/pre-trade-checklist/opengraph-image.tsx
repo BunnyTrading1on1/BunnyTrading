@@ -3,5 +3,5 @@ import { ogImageSize as size, ogImageContentType as contentType, renderBlogOgIma
 export { size, contentType };
 
 export default function Image() {
-  return renderBlogOgImage("XAUUSD Position Sizing: How to Calculate Your Lot Size");
+  return renderBlogOgImage("What I Check Before I Even Open a Chart");
 }

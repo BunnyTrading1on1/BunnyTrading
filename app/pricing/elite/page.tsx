@@ -87,7 +87,7 @@ export default function ElitePage() {
               boundaries, no &ldquo;that&rsquo;s not included.&rdquo;
             </li>
             <li>
-              <b>The full student portal:</b> every course module
+              <b>The full student portal:</b> every education module
               unlocked, including XAUUSD Mastery and Trading Psychology,
               the two most advanced.
             </li>
@@ -156,12 +156,12 @@ export default function ElitePage() {
             {
               href: "/about",
               label: "About",
-              desc: "Meet Bunny and the rule-based method behind every tier.",
+              desc: "Meet Bunny, and what “partnership” actually means at this tier.",
             },
             {
               href: "/position-sizing",
               label: "Free tool",
-              desc: "Try the XAUUSD position sizing calculator every review is checked against.",
+              desc: "A free XAUUSD position sizing calculator, no login required.",
             },
           ]}
         />

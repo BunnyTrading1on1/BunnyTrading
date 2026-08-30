@@ -528,7 +528,7 @@ export default function PortalApp({ userId }: { userId: string }) {
                 <RingLogo size="lg" />
                 <span className="hr" />
               </div>
-              <h1 className="herotitle">Course Topics</h1>
+              <h1 className="herotitle">Education Topics</h1>
               <p className="herosub">{MODULES.length} modules — work through them in order or jump around.</p>
             </div>
             <div className="modlist">
@@ -624,10 +624,10 @@ export default function PortalApp({ userId }: { userId: string }) {
                 <span className="hr" />
               </div>
               <h1 className="herotitle">My Progress</h1>
-              <p className="herosub">Overall course progress, lessons completed and minutes studied.</p>
+              <p className="herosub">Overall learning progress, lessons completed and minutes studied.</p>
             </div>
             <div className="card">
-              <div className="sectionlabel">Overall Course Progress</div>
+              <div className="sectionlabel">Overall Progress</div>
               <div className="progressrow">
                 <div className="progressnum">{stats.pct}%</div>
                 <div className="progressmeta">

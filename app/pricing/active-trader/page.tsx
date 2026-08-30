@@ -157,7 +157,7 @@ export default function ActiveTraderPage() {
             {
               href: "/position-sizing",
               label: "Free tool",
-              desc: "Try the XAUUSD position sizing calculator every review is checked against.",
+              desc: "A free XAUUSD position sizing calculator, open to use before every trade.",
             },
           ]}
         />

@@ -115,7 +115,7 @@ export default function RevengeTradingPost() {
             {
               href: "/blog",
               label: "Blog",
-              desc: "More on risk management and trading psychology.",
+              desc: "More on the patterns that show up after a loss.",
             },
           ]}
         />

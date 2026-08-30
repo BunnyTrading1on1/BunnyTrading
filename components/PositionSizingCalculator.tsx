@@ -5,8 +5,6 @@ import { useEffect, useRef, useState } from "react";
 // XAUUSD: pip value is $10 per 1.00 lot (standard 100 oz contract),
 // so lots = riskDollars / (stopPips × 10).
 const XAUUSD_PIP_VALUE_PER_LOT = 10;
-const MAX_RULE_RISK_PCT = 3;
-const BAR_SCALE_PCT = 15; // 100%-wide bar represents up to 15% risk
 
 export default function PositionSizingCalculator() {
   const [account, setAccount] = useState(1000);
@@ -49,9 +47,6 @@ export default function PositionSizingCalculator() {
     .replace(/0+$/, "")
     .replace(/\.$/, ".00");
 
-  const overRule = riskPct > MAX_RULE_RISK_PCT;
-  const barPct = Math.min((riskPct / BAR_SCALE_PCT) * 100, 100);
-
   return (
     <div className="calc-panel">
       <div className="calc-title">XAUUSD</div>
@@ -92,21 +87,6 @@ export default function PositionSizingCalculator() {
       <div className="calc-result">
         <div className="lbl">Recommended Lot Size</div>
         <div className="val">{lotDisplay}</div>
-        <div className="risk-bar" aria-hidden="true">
-          <div
-            className={`risk-bar-fill${overRule ? " is-over" : ""}`}
-            style={{ width: `${barPct}%` }}
-          />
-          <div
-            className="risk-bar-mark"
-            style={{ left: `${(MAX_RULE_RISK_PCT / BAR_SCALE_PCT) * 100}%` }}
-          />
-        </div>
-        <div className={`risk-note${overRule ? " is-over" : ""}`}>
-          {overRule
-            ? `Above the 3% rule, dial it back`
-            : `Within the 3% max-risk rule`}
-        </div>
         <div className="breakdown">
           Risking ${riskDollars.toFixed(2)} on a {safePips.toFixed(1)} pip stop
           <br />
@@ -114,9 +94,8 @@ export default function PositionSizingCalculator() {
           {XAUUSD_PIP_VALUE_PER_LOT}/pip)
         </div>
         <div className="calc-fineprint">
-          The 3% line reflects Bunny Trading&rsquo;s own risk framework, not
-          personalized advice. Every trader&rsquo;s numbers should reflect
-          their own plan and risk tolerance.
+          Not personalized advice. Every trader&rsquo;s numbers should
+          reflect their own plan and risk tolerance.
         </div>
       </div>
     </div>

@@ -51,19 +51,25 @@ export default function RewardToRiskPost() {
               profitable.
             </p>
 
+            <img
+              src="/images/risk-management.svg"
+              alt="Table of reward-to-risk ratios from 1:50 to 50:1 against the breakeven win rate needed at each, alongside a chart showing that a 2:1 ratio only needs a 33% win rate to be profitable"
+              width={1760}
+              height={1300}
+            />
+
             <h2>The math nobody does before they trade</h2>
             <p>
               At 1:1, you need to win more than half your trades just to
-              break even before costs. At 1:2, the math flips: you can be
-              right less than half the time (as low as 34 to 35%)
-              and still come out ahead, because your winners are
-              worth twice your losers. That gap between &ldquo;needs to be
-              right most of the time&rdquo; and &ldquo;can be wrong most of
-              the time&rdquo; is the entire reason this rule exists. It
-              turns trading from a game you have to be good at predicting
-              into a game you just have to execute consistently.
+              break even before costs. At 1:2, the math flips: you only
+              need to win 1 trade in 3 to come out ahead, because your
+              winners are worth twice your losers. That gap between
+              &ldquo;needs to be right most of the time&rdquo; and
+              &ldquo;can be wrong most of the time&rdquo; is the entire
+              reason this rule exists. It turns trading from a game you
+              have to be good at predicting into a game you just have to
+              execute consistently.
             </p>
-
             <h2>Why traders shrink it anyway</h2>
             <p>
               The setup that&rsquo;s only offering 1:1.3 usually looks
@@ -112,7 +118,7 @@ export default function RewardToRiskPost() {
             {
               href: "/blog",
               label: "Blog",
-              desc: "More on risk management and trading psychology.",
+              desc: "More on the numbers behind consistent trading.",
             },
           ]}
         />

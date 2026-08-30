@@ -39,7 +39,7 @@ export default function OpengraphImage() {
             textTransform: "uppercase",
           }}
         >
-          Trade the <span style={{ color: "#D9A94A" }}>rule,</span>
+          Real <span style={{ color: "#D9A94A" }}>feedback</span>
         </span>
         <span
           style={{
@@ -50,7 +50,7 @@ export default function OpengraphImage() {
             textTransform: "uppercase",
           }}
         >
-          not the number.
+          on every trade.
         </span>
         <span
           style={{

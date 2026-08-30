@@ -21,7 +21,7 @@ export default function About() {
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
             <div className="section-head">
               <span className="eyebrow">About</span>
-              <h1>One mentor. One approach.</h1>
+              <h1>One mentor. Working with how you already trade.</h1>
               <p>
                 Bunny Trading isn&rsquo;t a signal group and it isn&rsquo;t a
                 course. It&rsquo;s one-on-one mentorship built around a

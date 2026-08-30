@@ -84,7 +84,7 @@ export default function FoundationsPage() {
             </li>
             <li>
               <b>Student portal access:</b> the Forex Foundations and
-              Market Structure course modules, live BTC/XAU price
+              Market Structure education modules, live BTC/XAU price
               tracking, and your own trading journal.
             </li>
           </ul>
@@ -155,12 +155,12 @@ export default function FoundationsPage() {
             {
               href: "/position-sizing",
               label: "Free tool",
-              desc: "Try the XAUUSD position sizing calculator every Foundations review is checked against.",
+              desc: "A free XAUUSD position sizing calculator — work out your lot size before you send in this week's homework.",
             },
             {
               href: "/about",
               label: "About",
-              desc: "Meet Bunny and the rule-based method behind every tier.",
+              desc: "Meet Bunny, and why the rules matter more than the setup.",
             },
           ]}
         />

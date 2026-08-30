@@ -73,13 +73,14 @@ export default function CuttingWinnersPost() {
             <h2>Why it costs more than it looks like</h2>
             <p>
               A single early exit doesn&rsquo;t blow an account. The problem
-              is what it does to your numbers over time. If your system
-              needs a 1:2 reward-to-risk to be profitable and you&rsquo;re
-              consistently taking 1:0.8 because you exit early, you can be
-              right on direction most of the week and still lose money.
-              That&rsquo;s exactly the pattern I see traders bring into reviews
-              confused about. They weren&rsquo;t wrong about the market.
-              They were wrong about following their own exit.
+              is what it does to your numbers over time. At a true 1:2,
+              you only need to win 1 trade in 3 to come out ahead. Shrink
+              that to 1:0.8 by cutting winners short, and you need to be
+              right more than half the time just to break even, the exact
+              math your discipline was supposed to protect you from. That&rsquo;s
+              exactly the pattern I see traders bring into reviews confused
+              about. They weren&rsquo;t wrong about the market. They were
+              wrong about following their own exit.
             </p>
 
             <h2>The fix isn&rsquo;t willpower</h2>
@@ -122,14 +123,14 @@ export default function CuttingWinnersPost() {
               desc: "Real-time WhatsApp feedback catches this while the trade is still open, not after.",
             },
             {
-              href: "/about",
-              label: "About",
-              desc: "Meet Bunny and the rule-based method behind every review.",
+              href: "/blog/reward-to-risk-ratio-minimum",
+              label: "Related read",
+              desc: "The full breakeven math behind why 1:2 is a minimum, not a suggestion.",
             },
             {
               href: "/blog",
               label: "Blog",
-              desc: "More on risk management and trading psychology.",
+              desc: "More on the psychology that actually moves accounts.",
             },
           ]}
         />

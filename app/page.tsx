@@ -3,7 +3,6 @@ import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
 import HeroPhoto from "@/components/HeroPhoto";
 import PhotoReveal from "@/components/PhotoReveal";
-import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -15,61 +14,32 @@ export default function Home() {
           <div>
             <span className="eyebrow">One-on-one · Gold, Indexes, Crypto &amp; Stocks</span>
             <h1 className="hero-title">
-              <span className="word">Trade</span>{" "}
-              <span className="word">the</span>{" "}
-              <span className="word accent">rule,</span>
+              <span className="word">Real</span>{" "}
+              <span className="word accent">feedback</span>
               <br />
-              <span className="word">not</span>{" "}
-              <span className="word">the</span>{" "}
-              <span className="word">number.</span>
+              <span className="word">on</span>{" "}
+              <span className="word">every</span>{" "}
+              <span className="word">trade.</span>
             </h1>
             <p className="lede">
               Structured mentorship for gold, indexes, crypto, and stock
-              traders: position sizing, discipline, and real feedback on
-              every trade, before you click buy.
+              traders: position sizing, discipline, and a second pair of
+              eyes before you click buy.
             </p>
             <div className="hero-stats">
               <div>
-                <div className="num">0.01</div>
-                <div className="lbl">Starting Lots</div>
-              </div>
-              <div>
-                <div className="num">3%</div>
-                <div className="lbl">Max Risk / Trade</div>
-              </div>
-              <div>
                 <div className="num">1:2</div>
                 <div className="lbl">Min Reward:Risk</div>
+              </div>
+              <div>
+                <div className="num">0</div>
+                <div className="lbl">Sales Calls Required</div>
               </div>
             </div>
             <p className="hero-fineprint">
               Bunny Trading&rsquo;s own risk framework, not personalized
               advice for your account. Your numbers may differ.
             </p>
-          </div>
-          <div className="ticker-card">
-            <div className="pair">
-              <span>XAU/USD · 1H</span>
-              <span className="price">2,412.60</span>
-            </div>
-            <svg className="chart" viewBox="0 0 300 140" preserveAspectRatio="none">
-              <polyline
-                className="chart-line"
-                fill="none"
-                stroke="#C08A2E"
-                strokeWidth="2"
-                points="0,80 20,72 40,84 60,66 80,58 100,70 120,88 140,96 160,86 180,74 200,80 220,62 240,54 260,64 280,50 296,56"
-              />
-              <circle className="chart-dot" cx="296" cy="56" r="3.5" fill="#D9A94A" />
-            </svg>
-            <div className="rule-strip">
-              <span>
-                Written reason <b>required</b> before entry
-              </span>
-              <span>
-                Stop at <b>100 pips</b> = risks <b>$10</b>
-              </span>
-            </div>
           </div>
         </div>
       </header>
@@ -102,9 +72,9 @@ export default function Home() {
                 <span className="num">Step 02</span>
                 <h3>Size it to the stop</h3>
                 <p>
-                  Run the numbers before the trade, not after. The sizing
-                  tool on this site is the same formula every review checks
-                  against.
+                  Run the numbers before the trade, not after. Use the
+                  free position sizing tool on this site to work out your
+                  lot size before you send your reason in.
                 </p>
               </div>
               <div className="step">
@@ -141,7 +111,7 @@ export default function Home() {
               <p>
                 Three levels of mentorship, from written trade reviews to
                 unlimited live calls, all with student portal access:
-                course modules, live markets, and your own trading journal.{" "}
+                education modules, live markets, and your own trading journal.{" "}
                 <Link href="/pricing" style={{ color: "var(--gold-text)" }}>
                   See full pricing →
                 </Link>
@@ -151,7 +121,7 @@ export default function Home() {
 
           <Reveal delay={80}>
             <div className="feedback-card">
-              <span className="tag">Sample feedback · Foundations tier</span>
+              <span className="tag">Real feedback · Foundations tier</span>
               <p>
                 &ldquo;You&rsquo;ve been right on direction three weeks
                 straight, but you&rsquo;re still not making money. That&rsquo;s
@@ -165,8 +135,6 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-
-      <Testimonials limit={3} />
 
       <section id="journal" className="line-top">
         <div className="wrap">

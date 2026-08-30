@@ -8,10 +8,18 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    slug: "xauusd-position-sizing-guide",
-    title: "XAUUSD Position Sizing: The Formula Behind Every Trade Review",
+    slug: "pre-trade-checklist",
+    title: "What I Check Before I Even Open a Chart",
     description:
-      "The exact math I check every gold trade against before I look at anything else: account size, risk percentage, stop distance, and why the order you calculate them in matters.",
+      "Six honest questions before you start trading today, not once you're already staring at a setup. Sleep, mood, market conditions, and whether you're actually willing to walk away with zero trades.",
+    date: "2026-08-30",
+    displayDate: "August 30, 2026",
+  },
+  {
+    slug: "xauusd-position-sizing-guide",
+    title: "XAUUSD Position Sizing: How to Calculate Your Lot Size",
+    description:
+      "The formula behind XAUUSD position sizing: account size, risk percentage, stop distance, and why the order you calculate them in matters.",
     date: "2026-08-24",
     displayDate: "August 24, 2026",
   },

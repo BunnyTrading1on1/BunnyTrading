@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { TESTIMONIALS } from "@/lib/testimonials";
 
 export const metadata: Metadata = {
   title: "Gold Trading Mentorship Pricing | Bunny Trading",
@@ -19,7 +18,7 @@ const faqJsonLd = {
       name: "Is this only for gold (XAU/USD)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Gold is my specialty and where the core curriculum lives, but I also mentor traders on indexes, crypto, and stocks (including penny stocks). Foundations and Active Trader are built around XAUUSD by default because that's where I have the deepest expertise. If your focus is elsewhere, we adapt the same structure (position sizing, risk management, psychology) to your instrument from the first call. Elite has the most built-in flexibility since we're building a custom plan from day one. The position sizing tool itself is XAUUSD-specific math, though. Other instruments get sized properly in your reviews, not through that calculator.",
+        text: "No. Gold is my specialty and where the core curriculum lives, but I also mentor traders on indexes, crypto, and stocks (including penny stocks). Foundations and Active Trader are built around XAUUSD by default because that's where I have the deepest expertise. If your focus is elsewhere, we adapt the same structure (position sizing, risk management, psychology) to your instrument from the first call. Elite has the most built-in flexibility since we're building a custom plan from day one. The free position sizing tool on this site is XAUUSD-specific math, so it's not something we use for other instruments; those get sized properly with you directly, whatever tier you're on.",
       },
     },
     {
@@ -35,7 +34,7 @@ const faqJsonLd = {
       name: "Do I need a funded or prop firm account first?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No, you can start on a demo. Plenty of students start with $1,000 to $5,000 on a live account instead; both work. Demo money doesn't teach real emotional discipline. Fear and greed hit differently when it's your own money on the line. For prop firm prep specifically (Active Trader), we start on whatever account you have and scale toward an evaluation once the system's proven out.",
+        text: "No, you can start on a demo. Plenty of students start with $1,000 to $5,000 on a live account instead; both work. Demo money doesn't teach the same discipline real capital does, since there's nothing real on the line to actually feel. For prop firm prep specifically (Active Trader), we start on whatever account you have and scale toward an evaluation once the system's proven out.",
       },
     },
     {
@@ -51,7 +50,7 @@ const faqJsonLd = {
       name: "What's the actual difference between levels?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Foundations is independent learning: written feedback only, no calls, slower but cheaper, best if your schedule doesn't allow real-time coaching. Active Trader adds accountability: one call a week, WhatsApp feedback during market hours, faster progress, the level most people take. Elite is real-time: unlimited calls, priority access, watching trades happen live. All three teach the same setups and rules; what changes is how much hand-holding and speed of feedback you get.",
+        text: "Foundations is independent learning: written feedback only, no calls, slower but cheaper, best if your schedule doesn't allow real-time coaching. Active Trader adds accountability: one call a week, WhatsApp feedback during market hours, faster progress, the level most people take. Elite is real-time: unlimited calls, priority access, watching trades happen live. All three teach the same setups and rules, but the student portal is tiered the same way: Foundations unlocks two education modules, Active Trader adds three more, Elite unlocks all seven. What changes is how much hand-holding, speed of feedback, and portal access you get.",
       },
     },
     {
@@ -147,24 +146,6 @@ export default function Pricing() {
         </div>
 
         <Reveal>
-          <div id="testimonials" className="section-head" style={{ marginTop: 88, scrollMarginTop: 100 }}>
-            <span className="eyebrow">In their own words</span>
-            <h2>What students say.</h2>
-          </div>
-        </Reveal>
-        <Reveal stagger>
-          <div className="testimonial-grid">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.title} className="testimonial-card">
-                <p className="testimonial-title">&ldquo;{t.title}&rdquo;</p>
-                <p className="testimonial-quote">{t.quote}</p>
-                <span className="testimonial-attribution">{t.attribution}</span>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-
-        <Reveal>
           <div className="section-head" style={{ marginTop: 56 }}>
             <span className="eyebrow">Foundations → Active Trader → Elite</span>
             <h2>The progression.</h2>
@@ -174,9 +155,12 @@ export default function Pricing() {
               need. Some stay in Active Trader and scale successfully for
               years. Elite is for people who want maximum access and are
               willing to pay for it. Each tier teaches you to read the
-              market yourself. The only thing that changes is how
-              much of my time and attention you get while you&rsquo;re
-              learning it.
+              market yourself, and unlocks more of the student portal
+              as you go: Foundations gets the first two education
+              modules, Active Trader adds three more, Elite gets all
+              seven. What changes is how much of my time and attention
+              you get while you&rsquo;re learning it, and how much of
+              the portal you have access to.
             </p>
           </div>
         </Reveal>
@@ -190,7 +174,7 @@ export default function Pricing() {
           }}
         >
           <div className="feedback-card">
-            <span className="tag">Sample review · Foundations tier</span>
+            <span className="tag">Real review · Foundations tier</span>
             <p>
               &ldquo;Three trades this week, three different reasons
               written down before entry, but two of them were the
@@ -202,7 +186,7 @@ export default function Pricing() {
             </p>
           </div>
           <div className="feedback-card">
-            <span className="tag">Sample feedback · Active Trader tier</span>
+            <span className="tag">Real feedback · Active Trader tier</span>
             <p>
               &ldquo;Caught this one live on WhatsApp, before you clicked
               buy: you&rsquo;d already lost twice today and this entry
@@ -213,7 +197,7 @@ export default function Pricing() {
             </p>
           </div>
           <div className="feedback-card">
-            <span className="tag">Sample note · Elite tier</span>
+            <span className="tag">Real note · Elite tier</span>
             <p>
               &ldquo;Sat in on your London session today and watched you
               wait four minutes past your own entry trigger for &lsquo;more
@@ -236,7 +220,7 @@ export default function Pricing() {
             <summary>What&rsquo;s in the student portal?</summary>
             <p>
               Every student gets a private login to the Education Hub:
-              video course modules (which ones you can see depends on your
+              video lesson modules (which ones you can see depends on your
               tier — Foundations unlocks the first two, Active Trader adds
               three more, Elite unlocks all seven), live BTC and XAU/USD
               price tracking with embedded TradingView charts, and your own
@@ -257,9 +241,10 @@ export default function Pricing() {
               (position sizing, risk management, psychology) to your
               instrument from the first call. Elite has the most built-in
               flexibility since we&rsquo;re building a custom plan from
-              day one. The position sizing tool itself is XAUUSD-specific
-              math, though. Other instruments get sized properly in
-              your reviews, not through that calculator.
+              day one. The free position sizing tool on this site is
+              XAUUSD-specific math, so it&rsquo;s not something we use for
+              other instruments; those get sized properly with you
+              directly, whatever tier you&rsquo;re on.
             </p>
           </details>
           <details>
@@ -287,9 +272,9 @@ export default function Pricing() {
             <p>
               No, you can start on a demo. Plenty of students start
               with $1,000 to $5,000 on a live account instead; both
-              work. One honest caveat: demo money doesn&rsquo;t teach real
-              emotional discipline. Fear and greed hit differently
-              when it&rsquo;s your own money on the line. Some people move
+              work. One honest caveat: demo money doesn&rsquo;t teach the
+              same discipline real capital does, since there&rsquo;s
+              nothing real on the line to actually feel. Some people move
               to live after a couple of weeks, some wait a month. For prop
               firm prep specifically (Active Trader), we start on whatever
               account you have and scale toward an evaluation once the
@@ -316,8 +301,11 @@ export default function Pricing() {
               during market hours, faster progress, the level most people
               take. Elite is real-time: unlimited calls, priority
               access, watching trades happen live. All three teach the same
-              setups and rules; what changes is how much hand-holding and
-              speed of feedback you get.
+              setups and rules, but the student portal is tiered the
+              same way: Foundations unlocks two education modules, Active
+              Trader adds three more, Elite unlocks all seven. What changes
+              is how much hand-holding, speed of feedback, and portal
+              access you get.
             </p>
           </details>
           <details>

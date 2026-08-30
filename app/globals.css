@@ -145,9 +145,8 @@ header.hero {
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  max-width: 640px;
 }
 .hero h1 {
   font-size: clamp(42px, 6vw, 72px);
@@ -188,49 +187,6 @@ header.hero {
   color: var(--muted);
   margin-top: 18px;
   max-width: 40ch;
-}
-
-/* SIGNATURE: animated ticker line */
-.ticker-card {
-  background: var(--ink);
-  border-radius: 2px;
-  padding: 28px 24px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 24px 48px -20px rgba(20, 18, 14, 0.35);
-}
-.ticker-card .pair {
-  font-family: var(--font-mono);
-  color: var(--cream);
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-.ticker-card .pair .price {
-  color: var(--gold-light);
-  font-weight: 700;
-}
-svg.chart {
-  width: 100%;
-  height: 160px;
-  display: block;
-}
-.rule-strip {
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid #3a362b;
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: #b8af9c;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.rule-strip b {
-  color: var(--gold-light);
 }
 
 /* SECTIONS */
@@ -605,46 +561,6 @@ section.line-top {
   border-top: 1px solid #3a362b;
   padding-top: 14px;
 }
-.risk-bar {
-  position: relative;
-  height: 6px;
-  background: #3a362b;
-  border-radius: 3px;
-  overflow: visible;
-  margin-bottom: 10px;
-}
-.risk-bar-fill {
-  height: 100%;
-  border-radius: 3px;
-  background: var(--gold);
-  transition:
-    width 0.3s ease-out,
-    background-color 0.3s ease-out;
-}
-.risk-bar-fill.is-over {
-  background: var(--danger);
-}
-.risk-bar-mark {
-  position: absolute;
-  top: -3px;
-  width: 2px;
-  height: 12px;
-  background: var(--cream);
-  opacity: 0.5;
-}
-.risk-note {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--gold-light);
-  margin-bottom: 16px;
-  transition: color 0.3s ease-out;
-}
-.risk-note.is-over {
-  color: var(--danger);
-}
-
 /* Floating WhatsApp contact button */
 .whatsapp-fab {
   position: fixed;
@@ -1153,54 +1069,6 @@ section.line-top {
   margin-top: 8px;
 }
 
-/* TESTIMONIALS */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-.testimonial-card {
-  background: var(--white);
-  border-left: 4px solid var(--gold);
-  padding: 24px 28px;
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0 8px 24px -16px rgba(20, 18, 14, 0.25);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.testimonial-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 32px -20px rgba(20, 18, 14, 0.35);
-}
-.testimonial-title {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  font-size: 17px;
-  line-height: 1.2;
-  color: var(--ink);
-  margin-bottom: 12px;
-}
-.testimonial-quote {
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--ink-2);
-  margin-bottom: 16px;
-}
-.testimonial-attribution {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--gold-text);
-}
-@media (prefers-reduced-motion: reduce) {
-  .testimonial-card:hover {
-    transform: none;
-  }
-}
-
 /* BLOG */
 .blog-list {
   display: flex;
@@ -1265,6 +1133,13 @@ section.line-top {
 .blog-post .prose ul li {
   border-left: 2px solid var(--gold);
   padding-left: 14px;
+}
+.blog-post .prose img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  margin: 8px 0 24px;
 }
 .blog-post-meta {
   display: flex;
@@ -1557,8 +1432,7 @@ footer .note {
 }
 .hero .eyebrow,
 .hero p.lede,
-.hero-stats,
-.ticker-card {
+.hero-stats {
   animation: fade-up 0.75s ease-out backwards;
 }
 .hero .eyebrow {
@@ -1570,9 +1444,6 @@ footer .note {
 }
 .hero-stats {
   animation-delay: 0.4s;
-}
-.ticker-card {
-  animation-delay: 0.3s;
 }
 
 /* Hero headline — staggered word-by-word reveal */
@@ -1786,44 +1657,6 @@ footer .note {
 .hero .hero-fineprint {
   color: rgba(243, 238, 228, 0.55);
 }
-.hero .ticker-card {
-  border: 1px solid rgba(217, 169, 74, 0.28);
-  box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.65);
-}
-
-/* Ticker line draws itself in */
-@keyframes draw-line {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-.chart-line {
-  stroke-dasharray: 760;
-  stroke-dashoffset: 760;
-  animation: draw-line 2.4s ease-out 0.6s forwards;
-}
-@keyframes dot-pulse {
-  0%,
-  100% {
-    opacity: 1;
-    r: 3.5;
-  }
-  50% {
-    opacity: 0.45;
-    r: 5;
-  }
-}
-.chart-dot {
-  opacity: 0;
-  animation:
-    fade-in-dot 0.4s ease-out 2.8s forwards,
-    dot-pulse 2.4s ease-in-out 3.2s infinite;
-}
-@keyframes fade-in-dot {
-  to {
-    opacity: 1;
-  }
-}
 
 /* Hover lifts */
 .tier {
@@ -1974,11 +1807,5 @@ footer .cta:hover {
   .reveal-stagger > * > * {
     opacity: 1;
     transform: none;
-  }
-  .chart-line {
-    stroke-dashoffset: 0;
-  }
-  .chart-dot {
-    opacity: 1;
   }
 }

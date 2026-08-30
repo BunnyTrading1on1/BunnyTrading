@@ -72,10 +72,10 @@ export default function PositionSizingGuidePost() {
               trade, that&rsquo;s $10 on the line. Structure says your stop
               needs to sit 100 pips from entry to sit below the level that
               actually invalidates the trade. Lots = $10 ÷ (100 × $10) =
-              0.01 lots. That&rsquo;s the whole calculation, and you can run
-              it yourself with{" "}
-              <Link href="/position-sizing">the same calculator</Link> every
-              one of my reviews gets checked against.
+              0.01 lots. That&rsquo;s the whole calculation, and you don&rsquo;t
+              have to do it by hand:{" "}
+              <Link href="/position-sizing">the calculator on this site</Link> runs
+              the exact same formula for you, free.
             </p>
 
             <h2>Why the order matters</h2>
@@ -101,9 +101,9 @@ export default function PositionSizingGuidePost() {
             <p>
               This math is XAUUSD-specific. The $10-per-pip constant only
               holds for the standard 100 oz gold contract. Indexes, crypto,
-              and stocks all size differently, and I work that out with
-              students directly in reviews rather than through a calculator,
-              since contract specs vary by broker and instrument. The
+              and stocks all size differently, since contract specs vary
+              by broker and instrument, so that&rsquo;s worked out with
+              students directly, not through this calculator. The
               principle doesn&rsquo;t change though: size to the stop,
               always.
             </p>
@@ -125,7 +125,7 @@ export default function PositionSizingGuidePost() {
             {
               href: "/blog",
               label: "Blog",
-              desc: "More on risk management and trading psychology.",
+              desc: "More breakdowns like this one, all free to read.",
             },
           ]}
         />

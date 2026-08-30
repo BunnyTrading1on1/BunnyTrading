@@ -42,7 +42,7 @@ export default function WrittenReasonPost() {
 
           <div className="prose">
             <p>
-              Before you enter, send the reason: the level, the structure,
+              Send the reason before you enter: the level, the structure,
               the stop. It&rsquo;s the first rule I give every new student,
               and it&rsquo;s the one that does the most work, because
               it&rsquo;s not really about the writing. It&rsquo;s a test.
@@ -111,9 +111,9 @@ export default function WrittenReasonPost() {
               desc: "Why 1:2 reward-to-risk is a minimum, not a suggestion.",
             },
             {
-              href: "/blog",
-              label: "Blog",
-              desc: "More on risk management and trading psychology.",
+              href: "/blog/pre-trade-checklist",
+              label: "Related read",
+              desc: "What to check before you're even ready to write a reason down.",
             },
           ]}
         />

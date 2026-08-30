@@ -18,11 +18,11 @@ export default function PositionSizing() {
           <span className="eyebrow">Try it live · Built for XAUUSD</span>
           <h1>XAUUSD position sizing, worked out for you.</h1>
           <p>
-            The formula behind every gold trade review, turned into a
-            tool you can use before every trade. Change the numbers below.
-            Trading indexes, crypto, or stocks instead? The sizing math is
-            different for each. Bring your setup to a review and
-            we&rsquo;ll work it out together.
+            A free tool to work out your XAUUSD lot size before you
+            trade: account size, risk per trade, and stop distance in,
+            recommended lot size out. Change the numbers below. Trading
+            indexes, crypto, or stocks instead? The math is different for
+            each, and depends on your broker&rsquo;s contract specs.
           </p>
         </div>
         <PositionSizingCalculator />
