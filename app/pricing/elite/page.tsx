@@ -86,6 +86,11 @@ export default function ElitePage() {
               <b>Anything on request:</b> within reason, no
               boundaries, no &ldquo;that&rsquo;s not included.&rdquo;
             </li>
+            <li>
+              <b>The full student portal:</b> every course module
+              unlocked, including XAUUSD Mastery and Trading Psychology,
+              the two most advanced.
+            </li>
           </ul>
         </Reveal>
 

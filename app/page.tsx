@@ -140,7 +140,8 @@ export default function Home() {
               <h2>What changes is my time.</h2>
               <p>
                 Three levels of mentorship, from written trade reviews to
-                unlimited live calls.{" "}
+                unlimited live calls, all with student portal access:
+                course modules, live markets, and your own trading journal.{" "}
                 <Link href="/pricing" style={{ color: "var(--gold-text)" }}>
                   See full pricing →
                 </Link>

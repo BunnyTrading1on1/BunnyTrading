@@ -104,6 +104,7 @@ export default function Pricing() {
               <li>Written trade reviews</li>
               <li>Risk management &amp; sizing</li>
               <li>No calls, replies in 24h</li>
+              <li>Student portal &amp; Education Hub access</li>
             </ul>
             <span className="tier-btn">
               Learn more<span className="cta-arrow">→</span>
@@ -120,6 +121,7 @@ export default function Pricing() {
               <li>Real-time WhatsApp feedback</li>
               <li>Live trade corrections</li>
               <li>Prop firm prep</li>
+              <li>More Education Hub modules unlocked</li>
             </ul>
             <span className="tier-btn">
               Learn more<span className="cta-arrow">→</span>
@@ -136,6 +138,7 @@ export default function Pricing() {
               <li>Sit in on live sessions</li>
               <li>Priority, instant replies</li>
               <li>Anything on request</li>
+              <li>Every Education Hub module unlocked</li>
             </ul>
             <span className="tier-btn">
               Learn more<span className="cta-arrow">→</span>
@@ -229,6 +232,19 @@ export default function Pricing() {
           </div>
         </Reveal>
         <div className="faq">
+          <details>
+            <summary>What&rsquo;s in the student portal?</summary>
+            <p>
+              Every student gets a private login to the Education Hub:
+              video course modules (which ones you can see depends on your
+              tier — Foundations unlocks the first two, Active Trader adds
+              three more, Elite unlocks all seven), live BTC and XAU/USD
+              price tracking with embedded TradingView charts, and your own
+              trading journal to log setups and outcomes. It&rsquo;s not a
+              separate purchase, it comes with every tier. Accounts are set
+              up by me after you join, not self-signup.
+            </p>
+          </details>
           <details>
             <summary>Is this only for gold (XAU/USD)?</summary>
             <p>

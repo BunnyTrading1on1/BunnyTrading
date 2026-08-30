@@ -82,6 +82,11 @@ export default function FoundationsPage() {
             <li>
               <b>24-hour written feedback</b> on all submissions.
             </li>
+            <li>
+              <b>Student portal access:</b> the Forex Foundations and
+              Market Structure course modules, live BTC/XAU price
+              tracking, and your own trading journal.
+            </li>
           </ul>
         </Reveal>
 

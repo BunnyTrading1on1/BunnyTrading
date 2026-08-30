@@ -81,6 +81,11 @@ export default function ActiveTraderPage() {
               <b>Prop firm preparation:</b> how to pass evaluations,
               manage funded accounts, scale safely.
             </li>
+            <li>
+              <b>More of the student portal unlocked:</b> Support &amp;
+              Resistance Framework, Candlestick Confirmation, and Risk
+              Management modules, on top of everything in Foundations.
+            </li>
           </ul>
         </Reveal>
 
