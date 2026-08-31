@@ -36,23 +36,43 @@ export default function ElitePage() {
               { label: "Elite" },
             ]}
           />
-          <div className="section-head">
-            <span className="eyebrow">Level 03</span>
-            <h1>Elite</h1>
-            <div className="price" style={{ margin: "12px 0 20px" }}>
-              $999<small> / mo</small>
+          <div className="tier-head">
+            <div className="tier-head__copy">
+              <span className="eyebrow">Level 03</span>
+              <h1>Elite</h1>
+              <p className="lede">
+                Elite is partnership. You get everything in Active Trader,
+                and then unlimited access: no call cap, no
+                &ldquo;I&rsquo;ll get back to you tomorrow,&rdquo; no limits
+                on what you can ask for.
+              </p>
+              <p className="hero-fineprint" style={{ marginTop: 16 }}>
+                This tier closes once it&rsquo;s full. Not artificial
+                scarcity, unlimited access only works when there&rsquo;s
+                actual capacity.
+              </p>
             </div>
-            <p>
-              Elite is partnership. You get everything in Active Trader,
-              and then unlimited access: no call cap, no
-              &ldquo;I&rsquo;ll get back to you tomorrow,&rdquo; no limits
-              on what you can ask for.
-            </p>
-            <p className="hero-fineprint" style={{ marginTop: 16 }}>
-              This tier closes once it&rsquo;s full. Not artificial
-              scarcity, unlimited access only works when there&rsquo;s
-              actual capacity.
-            </p>
+            <aside className="tier-head__price">
+              <div className="tier-head__amount">$999</div>
+              <div className="tier-head__per">per month</div>
+              <ul className="tier-head__terms">
+                <li>
+                  <span className="tick">✓</span>Month to month, no lock-in
+                </li>
+                <li>
+                  <span className="tick">✓</span>Cancel or switch anytime
+                </li>
+                <li>
+                  <span className="tick">✓</span>No sales call to start
+                </li>
+              </ul>
+              <Link
+                href={{ pathname: "/contact", query: { tier: "Elite" } }}
+                className="tier-btn"
+              >
+                DM to start<span className="cta-arrow">→</span>
+              </Link>
+            </aside>
           </div>
         </Reveal>
 
@@ -61,37 +81,43 @@ export default function ElitePage() {
             <span className="eyebrow">What&rsquo;s included</span>
             <h2>Everything in Active Trader, and no ceiling.</h2>
           </div>
-          <ul className="detail-list">
-            <li>Everything in Active Trader: all calls, all WhatsApp, all homework, all feedback.</li>
-            <li>
-              <b>Unlimited calls:</b> as many as we can schedule.
-            </li>
-            <li>
-              <b>Priority access:</b> you come first, every single
-              time.
-            </li>
-            <li>
-              <b>Live session access:</b> sit in while I trade and
-              see the thinking in real time.
-            </li>
-            <li>
-              <b>Deep psychology work:</b> addressing the beliefs
-              and patterns that hold traders back.
-            </li>
-            <li>
-              <b>Faith and emotional support</b>, if you want it.
-              This tier includes the hard conversations too.
-            </li>
-            <li>
-              <b>Anything on request:</b> within reason, no
-              boundaries, no &ldquo;that&rsquo;s not included.&rdquo;
-            </li>
-            <li>
-              <b>The full student portal:</b> every education module
-              unlocked, including XAUUSD Mastery and Trading Psychology,
-              the two most advanced.
-            </li>
-          </ul>
+          <div className="included">
+            <div className="included__item">
+              <strong>Everything in Active Trader</strong>
+              <span>All calls, all WhatsApp, all homework, all feedback.</span>
+            </div>
+            <div className="included__item">
+              <strong>Unlimited calls</strong>
+              <span>As many as we can schedule.</span>
+            </div>
+            <div className="included__item">
+              <strong>Priority access</strong>
+              <span>You come first, every single time.</span>
+            </div>
+            <div className="included__item">
+              <strong>Live session access</strong>
+              <span>Sit in while I trade and see the thinking in real time.</span>
+            </div>
+            <div className="included__item">
+              <strong>Deep psychology work</strong>
+              <span>Addressing the beliefs and patterns that hold traders back.</span>
+            </div>
+            <div className="included__item">
+              <strong>Faith and emotional support</strong>
+              <span>If you want it. This tier includes the hard conversations too.</span>
+            </div>
+            <div className="included__item">
+              <strong>Anything on request</strong>
+              <span>Within reason, no boundaries, no &ldquo;that&rsquo;s not included.&rdquo;</span>
+            </div>
+            <div className="included__item">
+              <strong>The full student portal</strong>
+              <span>
+                Every education module unlocked, including XAUUSD
+                Mastery and Trading Psychology, the two most advanced.
+              </span>
+            </div>
+          </div>
         </Reveal>
 
         <Reveal delay={80}>

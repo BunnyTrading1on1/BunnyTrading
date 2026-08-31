@@ -36,19 +36,39 @@ export default function FoundationsPage() {
               { label: "Foundations" },
             ]}
           />
-          <div className="section-head">
-            <span className="eyebrow">Level 01</span>
-            <h1>Foundations</h1>
-            <div className="price" style={{ margin: "12px 0 20px" }}>
-              $199<small> / mo</small>
+          <div className="tier-head">
+            <div className="tier-head__copy">
+              <span className="eyebrow">Level 01</span>
+              <h1>Foundations</h1>
+              <p className="lede">
+                The Foundation Tier is where discipline meets structure. You
+                get weekly homework that forces you to think like a trader
+                before you risk real money: reading structure across
+                timeframes, sizing positions correctly, managing risk before
+                emotion takes over, and journaling the trades that matter.
+              </p>
             </div>
-            <p>
-              The Foundation Tier is where discipline meets structure. You
-              get weekly homework that forces you to think like a trader
-              before you risk real money: reading structure across
-              timeframes, sizing positions correctly, managing risk before
-              emotion takes over, and journaling the trades that matter.
-            </p>
+            <aside className="tier-head__price">
+              <div className="tier-head__amount">$199</div>
+              <div className="tier-head__per">per month</div>
+              <ul className="tier-head__terms">
+                <li>
+                  <span className="tick">✓</span>Month to month, no lock-in
+                </li>
+                <li>
+                  <span className="tick">✓</span>Cancel or switch anytime
+                </li>
+                <li>
+                  <span className="tick">✓</span>No sales call to start
+                </li>
+              </ul>
+              <Link
+                href={{ pathname: "/contact", query: { tier: "Foundations" } }}
+                className="tier-btn"
+              >
+                DM to start<span className="cta-arrow">→</span>
+              </Link>
+            </aside>
           </div>
         </Reveal>
 
@@ -57,37 +77,44 @@ export default function FoundationsPage() {
             <span className="eyebrow">What&rsquo;s included</span>
             <h2>Real work, every week.</h2>
           </div>
-          <ul className="detail-list">
-            <li>
-              <b>Weekly homework assignments:</b> real work every
-              single week that reinforces learning.
-            </li>
-            <li>
-              <b>Written trade reviews:</b> send me your setups, I
-              break down what you&rsquo;re seeing and why it matters.
-            </li>
-            <li>
-              <b>Risk management education:</b> position sizing
-              formulas, stop placement, R:R optimization, lot sizing
-              strategies tailored to your account.
-            </li>
-            <li>
-              <b>Psychology and discipline training:</b> the part
-              most traders skip, and most regret skipping.
-            </li>
-            <li>
-              <b>Your personal trading plan:</b> built around your
-              actual schedule and life, not a generic template.
-            </li>
-            <li>
-              <b>24-hour written feedback</b> on all submissions.
-            </li>
-            <li>
-              <b>Student portal access:</b> the Forex Foundations and
-              Market Structure education modules, live BTC/XAU price
-              tracking, and your own trading journal.
-            </li>
-          </ul>
+          <div className="included">
+            <div className="included__item">
+              <strong>Weekly homework assignments</strong>
+              <span>Real work every single week that reinforces learning.</span>
+            </div>
+            <div className="included__item">
+              <strong>Written trade reviews</strong>
+              <span>Send me your setups, I break down what you&rsquo;re seeing and why it matters.</span>
+            </div>
+            <div className="included__item">
+              <strong>Risk management education</strong>
+              <span>
+                Position sizing formulas, stop placement, R:R
+                optimization, lot sizing strategies tailored to your
+                account.
+              </span>
+            </div>
+            <div className="included__item">
+              <strong>Psychology and discipline training</strong>
+              <span>The part most traders skip, and most regret skipping.</span>
+            </div>
+            <div className="included__item">
+              <strong>Your personal trading plan</strong>
+              <span>Built around your actual schedule and life, not a generic template.</span>
+            </div>
+            <div className="included__item">
+              <strong>24-hour written feedback</strong>
+              <span>On all submissions.</span>
+            </div>
+            <div className="included__item">
+              <strong>Student portal access</strong>
+              <span>
+                The Forex Foundations and Market Structure education
+                modules, live BTC/XAU price tracking, and your own
+                trading journal.
+              </span>
+            </div>
+          </div>
         </Reveal>
 
         <Reveal delay={80}>

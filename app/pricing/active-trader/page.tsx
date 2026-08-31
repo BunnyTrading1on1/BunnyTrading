@@ -36,20 +36,40 @@ export default function ActiveTraderPage() {
               { label: "Active Trader" },
             ]}
           />
-          <div className="section-head">
-            <span className="eyebrow">Level 02 · Most take this</span>
-            <h1>Active Trader</h1>
-            <div className="price" style={{ margin: "12px 0 20px" }}>
-              $399<small> / mo</small>
+          <div className="tier-head">
+            <div className="tier-head__copy">
+              <span className="eyebrow">Level 02 · Most take this</span>
+              <h1>Active Trader</h1>
+              <p className="lede">
+                Active Trader is Foundations with a mentor who&rsquo;s
+                actually watching. Everything from Foundations stays:
+                you still do the homework, you still get written feedback.
+                But now you get live coaching on the one thing that separates
+                learning traders from funded traders: real-time discipline
+                under market pressure.
+              </p>
             </div>
-            <p>
-              Active Trader is Foundations with a mentor who&rsquo;s
-              actually watching. Everything from Foundations stays:
-              you still do the homework, you still get written feedback.
-              But now you get live coaching on the one thing that separates
-              learning traders from funded traders: real-time discipline
-              under market pressure.
-            </p>
+            <aside className="tier-head__price">
+              <div className="tier-head__amount">$399</div>
+              <div className="tier-head__per">per month</div>
+              <ul className="tier-head__terms">
+                <li>
+                  <span className="tick">✓</span>Month to month, no lock-in
+                </li>
+                <li>
+                  <span className="tick">✓</span>Cancel or switch anytime
+                </li>
+                <li>
+                  <span className="tick">✓</span>No sales call to start
+                </li>
+              </ul>
+              <Link
+                href={{ pathname: "/contact", query: { tier: "Active Trader" } }}
+                className="tier-btn"
+              >
+                DM to start<span className="cta-arrow">→</span>
+              </Link>
+            </aside>
           </div>
         </Reveal>
 
@@ -58,35 +78,43 @@ export default function ActiveTraderPage() {
             <span className="eyebrow">What&rsquo;s included</span>
             <h2>Everything in Foundations, plus live coaching.</h2>
           </div>
-          <ul className="detail-list">
-            <li>Everything in Foundations: all homework, all written reviews, all education.</li>
-            <li>
-              <b>Weekly 1-on-1 call:</b> 60 minutes on your charts,
-              every week.
-            </li>
-            <li>
-              <b>Real-time WhatsApp feedback:</b> submit your trade
-              reason before entry, get a same-day response during market
-              hours.
-            </li>
-            <li>
-              <b>Live trade feedback:</b> corrections while they
-              actually matter, not postmortems.
-            </li>
-            <li>
-              <b>Monthly accountability reviews:</b> performance
-              analysis, what&rsquo;s working, what needs to shift.
-            </li>
-            <li>
-              <b>Prop firm preparation:</b> how to pass evaluations,
-              manage funded accounts, scale safely.
-            </li>
-            <li>
-              <b>More of the student portal unlocked:</b> Support &amp;
-              Resistance Framework, Candlestick Confirmation, and Risk
-              Management modules, on top of everything in Foundations.
-            </li>
-          </ul>
+          <div className="included">
+            <div className="included__item">
+              <strong>Everything in Foundations</strong>
+              <span>All homework, all written reviews, all education.</span>
+            </div>
+            <div className="included__item">
+              <strong>Weekly 1-on-1 call</strong>
+              <span>60 minutes on your charts, every week.</span>
+            </div>
+            <div className="included__item">
+              <strong>Real-time WhatsApp feedback</strong>
+              <span>
+                Submit your trade reason before entry, get a same-day
+                response during market hours.
+              </span>
+            </div>
+            <div className="included__item">
+              <strong>Live trade feedback</strong>
+              <span>Corrections while they actually matter, not postmortems.</span>
+            </div>
+            <div className="included__item">
+              <strong>Monthly accountability reviews</strong>
+              <span>Performance analysis, what&rsquo;s working, what needs to shift.</span>
+            </div>
+            <div className="included__item">
+              <strong>Prop firm preparation</strong>
+              <span>How to pass evaluations, manage funded accounts, scale safely.</span>
+            </div>
+            <div className="included__item">
+              <strong>More of the student portal unlocked</strong>
+              <span>
+                Support &amp; Resistance Framework, Candlestick
+                Confirmation, and Risk Management modules, on top of
+                everything in Foundations.
+              </span>
+            </div>
+          </div>
         </Reveal>
 
         <Reveal delay={80}>

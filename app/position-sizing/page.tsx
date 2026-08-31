@@ -14,7 +14,7 @@ export default function PositionSizing() {
     <section className="line-top">
       <div className="wrap">
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Sizing Tool" }]} />
-        <div className="section-head">
+        <div className="section-head center-head">
           <span className="eyebrow">Try it live · Built for XAUUSD</span>
           <h1>XAUUSD position sizing, worked out for you.</h1>
           <p>

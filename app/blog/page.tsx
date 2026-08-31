@@ -16,7 +16,7 @@ export default function BlogIndex() {
       <div className="wrap">
         <Reveal>
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
-          <div className="section-head">
+          <div className="section-head center-head">
             <span className="eyebrow">From the desk</span>
             <h1>Rules, not predictions.</h1>
             <p>

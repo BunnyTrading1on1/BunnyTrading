@@ -82,15 +82,19 @@ export default function About() {
         </div>
       </section>
 
-      <section className="line-top">
+      <section className="rules line-top">
         <div className="wrap">
           <Reveal>
-            <div className="section-head">
+            <div className="section-head center-head">
               <span className="eyebrow">The method</span>
-              <h2>Rules first, charts second.</h2>
+              <h2>Your rules, not a template.</h2>
               <p>
-                Every student works under a set of rules. Here are a few
-                examples:
+                Every student trades under a written set of rules.
+                What&rsquo;s in them depends on you: your account, your
+                instrument, your tolerance. Gold and penny stocks
+                don&rsquo;t get sized the same way, and two traders on
+                the same instrument often shouldn&rsquo;t be either.
+                What stays the same for everyone is the structure.
               </p>
             </div>
           </Reveal>
@@ -98,7 +102,10 @@ export default function About() {
             <div className="rule-grid">
               <div className="rule">
                 <span className="num">01</span>
-                <span>Risk no more than 3% per trade</span>
+                <span>
+                  Your risk per trade is a number we set together, and
+                  it doesn&rsquo;t move mid-week
+                </span>
               </div>
               <div className="rule">
                 <span className="num">02</span>
@@ -109,7 +116,10 @@ export default function About() {
               </div>
               <div className="rule">
                 <span className="num">03</span>
-                <span>Require at least 1:2 reward to risk</span>
+                <span>
+                  Your minimum reward-to-risk is set for your instrument,
+                  then held to
+                </span>
               </div>
               <div className="rule">
                 <span className="num">04</span>
@@ -174,7 +184,7 @@ export default function About() {
       <section>
         <div className="wrap">
           <Reveal>
-            <div className="section-head">
+            <div className="section-head center-head">
               <span className="eyebrow">Ready to start?</span>
               <h2>See what each level includes.</h2>
               <p>
