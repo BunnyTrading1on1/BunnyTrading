@@ -498,7 +498,7 @@ section.line-top {
 /* PRICING */
 .pricing-head {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 56px;
   flex-wrap: wrap;
   margin-bottom: 40px;
